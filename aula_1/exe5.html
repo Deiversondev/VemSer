@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Html Forms</title>
+</head>
+
+<body>
+    <h1>Formulário</h1>
+
+    <form>
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="Username" required>
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder=" Your email" required>
+        <br>
+        <br>
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Type your password" required>
+
+        <p>Tell us your age</p>
+
+
+
+        <p>
+            <input type="radio" name="age" value="0-18 " id="option_1">
+            <label for="option_1">0 - 18</label>
+        </p>
+
+        <p>
+            <input type="radio" name="age" value="19-30" id="option_2">
+            <label for="option_2">19 - 30</label>
+        </p>
+
+        <p>
+            <input type="radio" name="age" value="31-50" id="option_3">
+            <label for="option_3">31 - 50</label>
+        </p>
+
+        <br><br>
+
+        <label for="question"> Secret Question</label>
+
+        <select name="question" id="question"> 
+            <option value="q1">What's your favorite food?</option>
+            <option value="q2">What's the worst experience you had?</option>
+            <option value="q3">When were you born?</option>
+    </select>
+
+        <br><br>
+
+        <label for="answer">Secret Answer</label>
+        <input type="text" id="answer" name="answer">
+
+        <br><br>
+        <label for="biography">Your biography</label>
+        <textarea name="biography" id="biography" cols="20" rows="10"></textarea>
+
+        <input type="submit" value="Send"></input>
+    </form>
+</body>
+
+</html>
