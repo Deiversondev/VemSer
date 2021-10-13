@@ -1,0 +1,133 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #c20202;
+}
+
+.navbar {
+    width: 80%;
+    margin: auto;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin-left: 5%;
+    position: relative;
+    top: 20px;
+}
+
+.main_title {
+    width: 80%;
+    margin: auto;
+}
+
+.title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    bottom: 50px;
+    left: 20px;
+    color: #fff;
+    font-size: 30px;
+}
+
+.nav_links,
+a {
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    text-decoration: none;
+    align-items: center;
+    height: 40px;
+    transition: all 300ms;
+}
+
+a:hover {
+    font-size: 20px;
+    background-color: #fff;
+    color: #43B047;
+    border: 3px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.container {
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.mushroom {
+    border: 1px solid #43B047;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px rgba(67, 176, 71, 0.7);
+}
+
+.content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.map {
+    border: 1px solid #c20202;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: 40px auto;
+    box-shadow: 6px 6px rgba(192, 2, 2, 0.8);
+    border-radius: 10px;
+}
+
+iframe {
+    width: 90%;
+}
+
+footer {
+    background-color: #c20202;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    font-size: 21px;
+}
+
+.footer {
+    /* border: 1px solid #000; */
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
