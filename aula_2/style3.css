@@ -1,0 +1,24 @@
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: red;
+}
+
+.container {
+    width: 400px;
+    margin: auto;
+    border: 1px solid #000;
+}
+
+ul li {
+    display: inline;
+}
+
+li {
+    margin: 0px, 40px;
+}

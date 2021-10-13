@@ -1,0 +1,16 @@
+.content {
+    background-color: cyan;
+}
+
+.content small {
+    color: deeppink;
+}
+
+.content h4,
+.content p {
+    font-size: 47px;
+}
+
+.content_2 h4 {
+    font-size: 68px;
+}
