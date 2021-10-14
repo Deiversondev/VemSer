@@ -191,6 +191,10 @@ select {
     transition: all 200ms;
 }
 
+select>option {
+    font-family: 'Oswald';
+}
+
 input:hover,
 select:hover {
     background-color: #43B047;
@@ -200,6 +204,8 @@ select:hover {
 
 input::placeholder {
     font-family: 'Oswald';
+    letter-spacing: 1px;
+    font-weight: 300;
 }
 
 textarea::placeholder {
