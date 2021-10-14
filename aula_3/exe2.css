@@ -1,0 +1,29 @@
+/* .teste p:nth-child(1) {
+    color: aqua;
+}
+
+.teste p:last-child {
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.teste p:first-child {
+    color: crimson;
+} */
+
+nav ul li::after {
+    content: '';
+    display: inline-block;
+    background-image: url(./images.png);
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+}
+
+p:not(.classic) {
+    color: crimson;
+}
+
+p:nth-child(odd) {
+    color: darkblue;
+}
