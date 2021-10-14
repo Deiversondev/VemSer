@@ -101,6 +101,11 @@ h2 {
     border-radius: 10px;
     box-shadow: 4px 4px rgba(67, 176, 71, 0.7);
     margin-bottom: 20px;
+    transition: all 500ms;
+}
+
+.carachters:hover {
+    width: 35%;
 }
 
 .carachters img {
