@@ -5,6 +5,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Oswald';
+    background-color: #dfdddd;
 }
 
 nav {
@@ -90,7 +91,7 @@ h2 {
     flex-wrap: wrap;
 }
 
-.mushroom {
+.carachters {
     border: 1px solid #43B047;
     width: 30%;
     display: flex;
@@ -102,7 +103,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-.mushroom img {
+.carachters img {
     width: 100px;
     padding: 20px;
 }
@@ -190,9 +191,11 @@ select {
     transition: all 200ms;
 }
 
-input:hover {
+input:hover,
+select:hover {
     background-color: #43B047;
     color: #fff;
+    filter: brightness(110%);
 }
 
 .send_btn {
