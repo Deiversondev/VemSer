@@ -198,6 +198,19 @@ select:hover {
     filter: brightness(110%);
 }
 
+input::placeholder {
+    font-family: 'Oswald';
+}
+
+textarea::placeholder {
+    font-family: 'Oswald';
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #fff;
+}
+
 .send_btn {
     width: 100px;
     transition: all 600ms;
