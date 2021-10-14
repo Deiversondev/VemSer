@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 html,
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Oswald';
 }
 
 nav {
     background-color: #c20202;
+    background-image: url(./5d6cbb07b18c7413aef2036f62a33e83.jpg);
+    background-position: center;
 }
 
 .navbar {
@@ -14,8 +19,8 @@ nav {
 }
 
 .logo {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     border: 1px solid #fff;
     display: flex;
@@ -24,7 +29,12 @@ nav {
     background-color: #fff;
     margin-left: 5%;
     position: relative;
-    top: 20px;
+    top: 40px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
 }
 
 .main_title {
@@ -39,19 +49,23 @@ nav {
     position: relative;
     bottom: 50px;
     left: 20px;
-    color: #fff;
+    color: #000;
     font-size: 30px;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 
 .nav_links,
 a {
     display: flex;
     justify-content: space-around;
-    color: #fff;
+    color: #000;
     text-decoration: none;
     align-items: center;
     height: 40px;
     transition: all 300ms;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 a:hover {
@@ -71,7 +85,6 @@ h2 {
 }
 
 .container {
-    /* border: 1px solid #000; */
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -86,6 +99,12 @@ h2 {
     align-items: center;
     border-radius: 10px;
     box-shadow: 4px 4px rgba(67, 176, 71, 0.7);
+    margin-bottom: 20px;
+}
+
+.mushroom img {
+    width: 100px;
+    padding: 20px;
 }
 
 .content {
@@ -122,7 +141,6 @@ footer {
 }
 
 .footer {
-    /* border: 1px solid #000; */
     display: flex;
     justify-content: space-between;
     width: 70%;
@@ -130,4 +148,103 @@ footer {
     align-items: center;
     margin-top: 10px;
     margin-bottom: 8px;
+}
+
+
+/* ------------- About us page ------------- */
+
+.about_video {
+    margin: auto;
+    display: flex;
+}
+
+.about_video iframe {
+    width: 50%;
+    margin: auto;
+    padding: 40px;
+}
+
+
+/* ------------- Contact us page ------------- */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 300px;
+}
+
+label {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+input,
+select {
+    width: 350px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    padding: 10px;
+    transition: all 200ms;
+}
+
+input:hover {
+    background-color: #43B047;
+    color: #fff;
+}
+
+.send_btn {
+    width: 100px;
+    transition: all 600ms;
+}
+
+.send_btn:hover {
+    border: none;
+    width: 130px;
+    height: 50px;
+    background-color: #247727;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+textarea {
+    width: 400px;
+    height: 80px;
+    resize: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+textarea:hover {
+    background-color: #43B047;
+    color: #fff;
+}
+
+.msg {
+    position: relative;
+    bottom: 40%;
+}
+
+@media (max-width:980px) {
+    .title {
+        bottom: 15px;
+        font-size: 20px;
+    }
+    .logo {
+        top: 10px;
+    }
+}
+
+@media(max-width:700px) {
+    input,
+    select,
+    textarea {
+        width: 200px;
+    }
 }
