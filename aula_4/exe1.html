@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Flexbox</title>
+    <style>
+        body,
+        ul,
+        li,
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            list-style: none;
+        }
+        
+        header {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        main {
+            border: 1px solid #000;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<header>
+    <a href="#">logo</a>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Videos</a></li>
+        </ul>
+    </nav>
+    <span>Teste</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam obcaecati autem architecto cum repellat et dignissimos impedit mollitia reprehenderit officia ullam nesciunt quae corporis at quam nemo, necessitatibus delectus possimus?</p>
+</header>
+
+<main>
+    <div style="background-color: aqua;" class="block block1">1</div>
+    <div style="background-color: rgb(29, 95, 95);" class="block block1">2</div>
+    <div style="background-color: rgb(53, 27, 60);" class="block block1">3</div>
+    <div style="background-color: rgb(200, 255, 0);" class="block block1">4</div>
+    <div style="background-color: rgb(255, 0, 204);" class="block block1">5</div>
+</main>
+
+</html>
