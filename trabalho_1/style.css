@@ -79,6 +79,7 @@ h1 {
     color: #1A75C1;
     text-align: center;
     width: 100%;
+    margin-bottom: 0px;
 }
 
 main {
@@ -90,19 +91,35 @@ main {
     width: 50%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 70px;
+    justify-content: space-evenly;
+    margin-left: 40px;
+    margin-bottom: 90px;
+}
+
+.cards small {
+    width: 100%;
+    position: relative;
+    top: 30px;
+    left: 17px;
+    color: #1A75C1;
 }
 
 .card {
     width: 30%;
+    height: 260px;
     text-align: center;
-    /* border: 1px solid #1A75C1;
-    box-shadow: 2px 2px #1A75C1; */
+    /* border: 1px solid #aaaaaa; */
+    box-shadow: 0 2px rgba(160, 160, 160, 0.6);
+    border-radius: 3px;
 }
 
 .card img {
     width: 100%;
+}
+
+.card h3 {
+    font-size: 16px;
+    padding: 10px;
 }
 
 h2,
@@ -112,12 +129,24 @@ h2,
 
 hr {
     border: 1px solid #1A75C1;
-    width: 105%;
+    width: 118%;
+}
+
+.more {
+    margin: 0 auto;
+    font-size: 30px;
+    text-decoration: none;
+    color: #1A75C1;
+    font-weight: 600;
+}
+
+.more:hover {
+    color: #0b497c;
 }
 
 .birthdays {
     width: 30%;
-    margin-left: 70px;
+    margin-left: 60px;
 }
 
 .aniversariante {
@@ -133,6 +162,7 @@ hr {
     flex-direction: column;
     position: relative;
     left: 20px;
+    font-size: 12px;
 }
 
 .aniversariante img {
@@ -142,27 +172,43 @@ hr {
 }
 
 .aniversariante input[type='text'] {
-    width: 440px;
+    width: 490px;
     height: 35px;
     border-radius: 15px;
     border: 1px solid #d8d8d8;
-    margin-top: 35px;
+    /* margin-top: 10px; */
     position: relative;
     right: 90px;
     margin-right: 0px;
 }
 
-.aniversariante input[type='submit'] {
-    width: 110px;
+button {
+    width: 150px;
     height: 30px;
     position: relative;
-    top: 40px;
-    right: 200px;
+    top: -12px;
+    left: 250px;
     /* margin-bottom: 20px; */
     border-radius: 15px;
     border: none;
     background-color: #1A75C1;
     color: #fff;
+    margin: 0;
+    padding-left: 30px;
+}
+
+.btn_icon {
+    /* border: 1px solid #000; */
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 260px;
+    bottom: 63px;
+    margin: 0;
+}
+
+.btn_icon img {
+    width: 100%;
 }
 
 h3 {
@@ -211,6 +257,11 @@ nav a {
     margin-left: 4px;
 }
 
+nav a:hover {
+    color: #0b497c;
+    ;
+}
+
 footer nav img {
     margin-right: 2px;
     position: relative;
@@ -218,6 +269,14 @@ footer nav img {
 }
 
 footer {
-    border: 1px solid rgb(184, 184, 184);
+    border-top: 1px solid rgb(184, 184, 184);
     margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 15px;
+}
+
+input::placeholder {
+    padding: 10px;
 }
