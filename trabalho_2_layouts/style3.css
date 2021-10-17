@@ -1,0 +1,80 @@
+html,
+body,
+*,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    background-color: #000;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav li {
+    margin-left: 15px;
+}
+
+main {
+    width: 90%;
+    display: flex;
+    /* border: 1px solid #000; */
+    margin: auto;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.main_dog {
+    /* border: 1px solid #000; */
+    width: 68%;
+}
+
+.main_dog img {
+    width: 100%;
+}
+
+.dogs_column {
+    /* border: 1px solid #000; */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dogs_column img {
+    width: 100%;
+}
