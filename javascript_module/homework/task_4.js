@@ -16,7 +16,7 @@ if ((typeof firstNumber === 'number' && firstNumber.toString() !== 'NaN') && (ty
         let multiply = firstNumber * secondNumber;
         alert('The result is ' + multiply);
     } else if (operation === '4') {
-        if ((firstNumber === 0) || (secondNumber === 0)) {
+        if ((secondNumber === 0)) {
             alert('You cannot divide a number by zero');
         } else {
             let divide = firstNumber / secondNumber
