@@ -8,4 +8,4 @@ for(let i = 1; i <= years.length ; i++){
 }
 
 let totalWage =( wage/100 * percentage) + wage;
-console.log(totalWage)
+console.log(`In 2021, the employee's wage will be ${totalWage}`)
