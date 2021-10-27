@@ -9,5 +9,4 @@ for(let i = 0; i < years.length ; i++){
     console.log(`Wage: ${( wage/100 * percentage) + wage}`);
     console.log(`On year ${years[i]  } , the employee's wage is ${( wage/100 * percentage) + wage}`)
     percentage = percentage * 2;
-    
 }
