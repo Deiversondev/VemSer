@@ -83,10 +83,4 @@ let otherChars = [];
     }
 
 }
-
 countVowelsAndConsonants(phrase);
-
-
-// else if ((string[i] !== ' ') && (string[i] !== '!') && (string[i] !== '.') && (string[i] !== '?') && (string[i] !== '@')) {
-//     consonants++
-// }
