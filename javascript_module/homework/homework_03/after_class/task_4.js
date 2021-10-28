@@ -3,7 +3,7 @@ let userName = prompt('Heeeey, tell me your name ;)');
 let answer = prompt('Would you like to do something?')
 while(answer !== 'no') {
     
-    let input = prompt('What would you like to do?')
+let input = prompt('What would you like to do?')
 
 if (input === 'add') {
     let todoItem = prompt('What would you like to add to the list?')
