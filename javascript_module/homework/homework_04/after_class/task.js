@@ -6,13 +6,11 @@ let vowels = 0;
 let consonants = 0;
 let chars = 0;
 let number = 0;
-let numbers = [];
 
 let countVowelsAndConsonants = (string) =>{
 let vowelsArray = [];
 let consonantsArray = [];
 let otherChars = [];
-let numbers = [];
 
         for(let i = 0; i < string.length ; i++){
         if ((string[i] === 'a') || (string[i] === 'e') || (string[i] === 'i') || (string[i] === 'o') || (string[i] === 'u') ) {
@@ -24,18 +22,11 @@ let numbers = [];
             consonants++
         }
 
-        else if( (string[i] !== ' ') && (string[i] !== '0') && (string[i] !== '1') && (string[i] !== '2') && (string[i] !== '3') && (string[i] !== '4') && (string[i] !== '5') && (string[i] !== '6') && (string[i] !== '7') && (string[i] !== '8') && (string[i] !== '9')) {
+        else if( (string[i] !== ' ')) {
             otherChars.push(string[i])
                 chars++;
         }
-
-        else if((string[i] === '0') || (string[i] === '1') || (string[i] === '2') || (string[i] === '3') || (string[i] === '4') || (string[i] === '5') || (string[i] === '6') || (string[i] === '7') || (string[i] === '8') || (string[i] === '9')){
-            numbers.push(string[i]);
-            number++
-        }
     }
-    // console.log(vowels , consonants) 
-
 
     if ((vowels > 0) && (consonants > 0) && (chars > 0)) {
         console.log(`The string '${phrase}' has ${vowels} vowels and ${consonants} consonants`);
@@ -95,11 +86,6 @@ let numbers = [];
 
 countVowelsAndConsonants(phrase);
 
-if (number > 0){
-    console.log(`Hey man, gotta tell you , you are not really supposed to type numbers there, but since you did ...`)
-    console.log(`There is ${number} numbers, and here are your numbers :`)
-    console.log(numbers)
-}
 
 // else if ((string[i] !== ' ') && (string[i] !== '!') && (string[i] !== '.') && (string[i] !== '?') && (string[i] !== '@')) {
 //     consonants++
