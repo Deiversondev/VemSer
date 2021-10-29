@@ -58,5 +58,3 @@ else if (option === 'list') {
 
 action = prompt('Você ainda pretende fazer mais alguma coisa?')
 }
-
-//Apesar de fazer esse em português  , mantive as strings dos Ifs em inglês , pra ficar mais curto pra digitar e mais facil pra vc testar ( Olha como sou bonzinho :) kkkkkkkkkkk)
