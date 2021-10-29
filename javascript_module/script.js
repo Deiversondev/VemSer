@@ -56,7 +56,17 @@ else if (option === 'list') {
     listProducts(productsList);
 }
 
+else if (option === 'total'){
+   let total =  productsList.reduce((currentValue , product ) => {
+    return currentValue + product.value;
+    }, 0);
+    console.log(total)
+}
+
 action = prompt('Você ainda pretende fazer mais alguma coisa?')
 }
 
-//Apesar de fazer esse em português  , mantive as strings dos Ifs em inglês , pra ficar mais curto pra digitar e mais facil pra vc testar ( Olha como sou bonzinho :) kkkkkkkkkkk)
+
+
+
+//Apesar de fazer esse em português  , mantive as strings dos ifs em inglês , pra ficar mais curto pra digitar e mais facil pra vc testar ( Olha como sou bonzinho :) kkkkkkk)
