@@ -5,8 +5,6 @@ let action = prompt('Você deseja mexer no sistema de registros de produto da lo
 while (action !== 'no'){
     let option = prompt('O que você quer fazer?')
 
-//Register item function
-
 if (option === 'add') {
     let id = parseInt(prompt('Informe um id para o produto'));
     let description = prompt('Informe o nome do produto');
@@ -60,7 +58,7 @@ else if (option === 'list') {
     listProducts(productsList);
 }
 
-//This function calculates the total value of all products in the store
+//This function sums the total value of all products in the store
 else if (option === 'total'){
    let total =  productsList.reduce((currentValue , product ) => {
     return currentValue + product.value;
