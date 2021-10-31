@@ -30,8 +30,8 @@ if (option === 'add') {
 else if (option === 'delete'){
     let deleteProduct = (arr) => {
         let  id = parseInt(prompt('Informe um id para o produto'));
-        let product = arr.filter(product => product.id !== id);
-        console.log(product);
+        arr = arr.filter(product => product.id !== id);
+        console.log(arr);
     
     }
     deleteProduct(productsList)
