@@ -1,8 +1,7 @@
 let colaboradores = [{id:34,nome:'Deivid',codProjeto:23,marcacoesPonto:[]}];
 let projetos = [{codigo:23, titulo: 'Test', colaboradoresAlocados:[]},{codigo:13, titulo: 'Test2', colaboradoresAlocados:[]}];
-let id = 0;
-let codProjeto = 0;
-
+var id = 0;
+var codigo = 0;
 class Marcacao {
     dia = 0;
     horas = 0;
@@ -20,19 +19,15 @@ class Colaborador {
     codProjeto = 0;
     marcacoesPonto = [];
 
-    constructor(id,nome,codProjeto,marcacoesPonto) {
-        this.id = id;
+    constructor(nome,codProjeto,marcacoesPonto) {
+        this.id = id ++;
         this.nome = nome;
         this.codProjeto = codProjeto ? codProjeto : this.codProjeto;
         this.marcacoesPonto = marcacoesPonto ? marcacoesPonto : this.marcacoesPonto;
     }
 
-    cadastraColaborador(id,nome,codProjeto,marcacoesPonto){ 
-        id = Math.floor(Math.random() * 40);
-        nome = prompt('Digite seu nome');
-        codProjeto;
-        marcacoesPonto;
-        let colaborador = new Colaborador(id, nome,codProjeto,marcacoesPonto);
+    cadastraColaborador(nome){ 
+        let colaborador = new Colaborador(nome);
         
         colaboradores.push(colaborador);
         console.log(colaborador);
@@ -50,18 +45,14 @@ class Projeto {
     titulo = '';
     colaboradoresAlocados = [];
 
-    constructor(codigo,titulo,colaboradoresAlocados){
-        this.codigo = codigo;
+    constructor(titulo,colaboradoresAlocados){
+        this.codigo = codigo++;
         this.titulo = titulo;
         this.colaboradoresAlocados = colaboradoresAlocados ? colaboradoresAlocados : this.colaboradoresAlocados;
     }
 
-    cadastrarProjeto(codigo,titulo,colaboradoresAlocados){
-        codigo = Math.floor(Math.random() * 40);
-        titulo = prompt('Qual é o nome do projeto?');
-        colaboradoresAlocados;
-        let projeto = new Projeto(codigo,titulo,colaboradoresAlocados);
-        
+    cadastrarProjeto(titulo){
+        let projeto = new Projeto(titulo);
         projetos.push(projeto);
         console.log(projeto);
     }
@@ -72,11 +63,17 @@ class Projeto {
     }
 } 
 
-let novoColaborador = new Colaborador();
-novoColaborador.cadastraColaborador();
+let cadastrarColaborador = (nome) => {
+    nome = prompt('Digite seu nome');
+    let novoColaborador = new Colaborador();
+    novoColaborador.cadastraColaborador(nome);
+}
 
-// let novoProjeto = new Projeto();
-// novoProjeto.cadastrarProjeto();
+let cadastrarProjeto = (titulo) =>{
+    titulo = prompt('Qual é o nome do projeto?');
+    let novoProjeto = new Projeto();
+    novoProjeto.cadastrarProjeto(titulo);
+}
 
 let alocarColaborador = () =>{
     let employee = prompt('Nome do colaborador');
@@ -87,7 +84,6 @@ let alocarColaborador = () =>{
     encontrarColaborador.codProjeto = encontrarProjeto.codigo;
     console.log(encontrarProjeto);
     encontrarProjeto.colaboradoresAlocados.push(encontrarColaborador);
-    
 }
 
 
@@ -100,7 +96,7 @@ let desalocarColaborador = () =>{
     let colaboradorEncontrado = projetoEncontrado.colaboradoresAlocados.find(colaborador => colaborador.nome === employee );
     colaboradorEncontrado.codProjeto = 0;
     console.log(colaboradorEncontrado);
-    colaboradores.push(colaboradorEncontrado)
+    // colaboradores.push(colaboradorEncontrado)
     projetoEncontrado.colaboradoresAlocados.splice(index,1)
     console.log(projetoEncontrado);
     
@@ -131,6 +127,8 @@ let colaboradoresSemMarcacaoDePonto = () => {
     console.log(employees);
 }
 
+cadastrarColaborador();
+cadastrarProjeto();
 colaboradoresSemMarcacaoDePonto();
 
 // colaboradoresSemProjeto();
