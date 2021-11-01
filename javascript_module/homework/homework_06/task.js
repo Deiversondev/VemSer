@@ -1,5 +1,5 @@
-let colaboradores = [{id:34,nome:'Deivid',codProjeto:23,marcacoesPonto:[]}];
-let projetos = [{codigo:23, titulo: 'Test', colaboradoresAlocados:[]},{codigo:13, titulo: 'Test2', colaboradoresAlocados:[]}];
+let colaboradores = [];
+let projetos = [];
 let id = 0;
 let codigo = 0;
 
@@ -71,7 +71,6 @@ class Validacoes {
         }
     }
     notFound(){
-
         if(index === -1){
             alert('Esse colaborador não está alocado neste projeto');
         }
