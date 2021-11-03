@@ -1,0 +1,89 @@
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px auto;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: center;
+    margin-top: -80px;
+}
+
+.block {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    border: 3px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.non_clickable {
+    pointer-events: none;
+}
+
+.block p {
+    margin-top: 40%;
+}
+
+.block:nth-of-type(1) {
+    border-top: 1px solid #fff;
+}
+
+.block:nth-of-type(3) {
+    border-bottom: 1px solid #fff;
+}
+
+.none_left {
+    border-left: 1px solid #fff;
+}
+
+.none_right {
+    border-right: 1px solid #fff;
+}
+
+#playerX {
+    color: rgb(248, 0, 0);
+}
+
+#playerO {
+    color: rgb(25, 0, 248);
+}
+
+.scores {
+    border: 1px solid #000;
+    width: 70%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    margin-top: -80px;
+}
+
+.btnScore {
+    width: 70%;
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
+    position: relative;
+    top: -10px;
+}
+
+#resetScore,
+#reset {
+    width: 150px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}

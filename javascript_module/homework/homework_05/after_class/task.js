@@ -28,13 +28,13 @@ if (option === 'add') {
 
 //This function deletes an specific product by taking its id as an argument
 else if (option === 'delete'){
-    let deleteProduct = (arr) => {
+    let deleteProduct = () => {
         let  id = parseInt(prompt('Informe um id para o produto'));
-        arr = arr.filter(product => product.id !== id);
-        console.log(arr);
+        productsList = productsList.filter(product => product.id !== id);
+        console.log(productsList);
     
     }
-    deleteProduct(productsList)
+    deleteProduct()
 }
 
 

@@ -70,13 +70,11 @@ class Validacoes {
             alert('Você precisa digitar números válidos!');
         }
     }
-    notFound(){
-        if(index === -1){
+    notFound(index){
+        if(index === -1 || index === undefined){
             alert('Esse colaborador não está alocado neste projeto');
         }
     }
-
-
 }
 
 let option = prompt('Bem vindo ao sistema de projetos e alocações! Escolha a ação que deseja \n 1 - Cadastrar colaborador \n 2 - Cadastrar projeto \n 3 - Alocar colaborador \n 4 - Desalocar colaborador \n 5 - Marcar ponto \n 6 - Lista de colaboradores sem projeto \n 7 - Lista de projetos sem colaboradores \n 8 - Lista de colaboradores que ainda não marcaram o ponto \n 9 - Fechar sistema');
@@ -109,7 +107,7 @@ else if(option === '3'){
         let project = parseInt(prompt('Qual o código do projeto?'));
         if(new Validacoes().isNotANumber(project));
         else{
-            let encontrarProjeto = projetos.find(projeto => projeto.codigo === project )
+            let encontrarProjeto = projetos.find(projeto => projeto.codigo === project );
             encontrarColaborador.codProjeto = encontrarProjeto.codigo;
             console.log(encontrarProjeto);
             encontrarProjeto.colaboradoresAlocados.push(encontrarColaborador);
@@ -124,16 +122,20 @@ else if(option === '4'){
         let project = parseInt(prompt('Qual o código do projeto?'));
         if(new Validacoes().isNotANumber(project));
         else {
-            let projetoEncontrado = projetos.find(projeto => projeto.codigo === project )
-            console.log(projetoEncontrado)
+            let projetoEncontrado = projetos.find(projeto => projeto.codigo === project );
+            console.log(projetoEncontrado);
             let employee = prompt('Nome do colaborador');
             let index = projetoEncontrado.colaboradoresAlocados.indexOf(employee);
-            let colaboradorEncontrado = projetoEncontrado.colaboradoresAlocados.find(colaborador => colaborador.nome === employee );
-            colaboradorEncontrado.codProjeto = 0;
-            console.log(colaboradorEncontrado);
-            // colaboradores.push(colaboradorEncontrado)
-            projetoEncontrado.colaboradoresAlocados.splice(index,1)
-            console.log(projetoEncontrado);
+            if (new Validacoes().notFound(index)) ;
+            else{
+                let colaboradorEncontrado = projetoEncontrado.colaboradoresAlocados.find(colaborador => colaborador.nome === employee );
+                colaboradorEncontrado.codProjeto = 0;
+                console.log(colaboradorEncontrado);
+                // colaboradores.push(colaboradorEncontrado)
+                projetoEncontrado.colaboradoresAlocados.splice(index,1);
+                console.log(projetoEncontrado);
+            }
+            
         }
         
     }
@@ -170,7 +172,7 @@ else if (option === '6'){
 
 else if (option === '7'){
     let projetosSemColaboradores = () =>{
-        let projects = projetos.filter(project => project.colaboradoresAlocados.length === 0)
+        let projects = projetos.filter(project => project.colaboradoresAlocados.length === 0);
         console.log(projects);
     }
     projetosSemColaboradores();
