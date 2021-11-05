@@ -1,0 +1,24 @@
+{
+    "colaboradores": [{
+            "nome": "Lionell Gonzalez",
+            "email": "lion@gmail.com",
+            "senha": "nM9$´lcs",
+            "dataNascimento": "15/08/1987",
+            "id": 3
+        },
+        {
+            "nome": "Deiverson",
+            "email": "dcruzbhha2@gmail.com",
+            "senha": "fV#56m0*",
+            "dataNascimento": "24/11/2000",
+            "id": 4
+        },
+        {
+            "nome": "Thamyres Mikaela",
+            "email": "thamyresleal47@gmail.com",
+            "senha": "LilicaripilicA7$",
+            "dataNascimento": "20/08/2003",
+            "id": 5
+        }
+    ]
+}
