@@ -1,0 +1,14 @@
+.map {
+    border: 1px solid #c20202;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: 40px auto;
+    box-shadow: 6px 6px rgba(192, 2, 2, 0.8);
+    border-radius: 10px;
+}
+
+iframe {
+    width: 90%;
+}
