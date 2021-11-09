@@ -119,6 +119,7 @@ const irParaEdicao = (event) =>{
     elementoDestino.className = elementoDestino.className.replace('d-none', 'd-flex');
 
     let id = event.target.id;
+    console.log(id)
     let nomeInput =  document.getElementById('nome-input-edit');
     let dataInput = document.getElementById('date-input-edit');
     let emailInput = document.getElementById('email-input-edit');
