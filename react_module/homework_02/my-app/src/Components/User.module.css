@@ -1,0 +1,14 @@
+.employee {
+    margin: 20px auto;
+    width: 300px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.button {
+    margin-bottom: 15px;
+}
