@@ -1,7 +1,7 @@
 import styles from './Header.module.css'
 
 
-function Header(){
+function Header({Link}){
     return(
         <div>
             <header>
@@ -14,9 +14,15 @@ function Header(){
                             <h3>Melhores alunos do VemSer de todos os tempos</h3>
                         </div>
                         <div className={styles.nav_links}>
-                            <a href="">Home</a>
-                            <a href="">Sobre</a>
-                            <a href="">Contato</a>
+                        <a href="">
+                            <Link to= "/">Home</Link>
+                         </a>
+                        <a href="">
+                             <Link to= "/about">About</Link>
+                         </a>
+                        <a href=""> 
+                            <Link to= "/contactUs">Contato</Link>
+                        </a>
                         </div>
                     </div>
                 </nav>

@@ -1,0 +1,18 @@
+.about_video {
+    margin: auto;
+    display: flex;
+}
+
+.about_video iframe {
+    width: 50%;
+    margin: auto;
+    padding: 40px;
+}
+
+.content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}

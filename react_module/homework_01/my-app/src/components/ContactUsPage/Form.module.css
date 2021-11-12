@@ -1,0 +1,101 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 300px;
+    margin: 40px 0;
+}
+
+label {
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-right: 5px;
+}
+
+input,
+select {
+    width: 350px;
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    padding: 10px;
+    transition: all 200ms;
+    margin: 5px 0;
+}
+
+select>option {
+    font-family: 'Oswald';
+}
+
+input:hover,
+select:hover {
+    background-color: #43B047;
+    color: #fff;
+    filter: brightness(110%);
+}
+
+input::placeholder {
+    font-family: 'Oswald';
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+textarea::placeholder {
+    font-family: 'Oswald';
+}
+
+input:hover::placeholder,
+textarea:hover::placeholder {
+    color: #fff;
+}
+
+.send_btn {
+    width: 100px;
+    transition: all 600ms;
+}
+
+.send_btn:hover {
+    border: none;
+    width: 130px;
+    height: 50px;
+    background-color: #247727;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 1px 0 0 #000, -1px 0 0 #000, 0 1px 0 #000, 0 -1px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+textarea {
+    width: 400px;
+    height: 80px;
+    resize: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+textarea:hover {
+    background-color: #43B047;
+    color: #fff;
+}
+
+.msg {
+    position: relative;
+    bottom: 40%;
+}
+
+@media(max-width:700px) {
+    input,
+    select,
+    textarea {
+        width: 200px;
+    }
+    .carachters {
+        width: 28%;
+    }
+    .carachters:hover {
+        width: 32%;
+    }
+}
