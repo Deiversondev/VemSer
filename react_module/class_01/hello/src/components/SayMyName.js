@@ -1,9 +1,10 @@
 import styles from './SayMyName.module.css'
 
 function SayMyName(props){
+    const numero = props.calcular(6)
     return (
         <div className={styles.sayMyName}>
-           <p>Heeeeey {props.name}</p> 
+            <h1>{numero}</h1>
         </div>
     )
 }

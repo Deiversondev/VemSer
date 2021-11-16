@@ -1,30 +1,35 @@
-import './App.css';
-import List from './components/List';
-function App() {
-  
+// import './App.css';
+// import {
+//   BrowserRouter as Router, 
+//   Routes,
+//   Route,
+//   Link
+// } from 'react-router-dom';
+// import Home from './pages/Home';
+// import Empresa from './pages/Empresa';
+// import Contato from './pages/Contato';
+// import Menu from './components/Menu';
+// import Footer from './components/Footer';
 
-  const url = 'https://via.placeholder.com/150';
-  const name = 'Joãozinho'
+// function App() {
 
-  return (
-    <div className="App">
-     <List/>
-    </div>
-  );
-}
+//   return (
+//       <Router>
+//        <Menu Link={Link}/>
 
-export default App;
+//         <Routes>
 
+//           <Route path="/" element={<Home/>} />
 
+//           <Route path="/empresa" element={<Empresa/>} />
 
+//           <Route path="/contato" element={<Contato/>} />
 
+//         </Routes>
 
+//         <Footer Link={Link}/>
+//       </Router>
+//   );
+// }
 
-
-
- {/* <h2>Just testing</h2>
-      <p>Hello {newName} , {newName2}</p>
-      <p>Soma: {sum(8,8)}</p>
-      <img src={url} alt="" /> */
-    
-  }
+// export default App;

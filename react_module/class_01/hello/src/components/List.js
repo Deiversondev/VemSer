@@ -1,16 +1,19 @@
 import Item from './Item'
 
-function List(){
+function List() {
     return (
-        <>
-        <h1>My List</h1>
+      <>
+        <h1>Minha Lista</h1>
         <ul>
-            <Item marca="Ferrari"/>
-            <Item marca="Bugatti"/>
-            <Item marca="Renault"/>
+            <Item/>
+            <Item menu="Sobre" />
+            <Item menu="Contato" url={30} />
         </ul>
-        </>
+      </>
     );
-}
+  }
+  
+
+  
 
 export default List;
