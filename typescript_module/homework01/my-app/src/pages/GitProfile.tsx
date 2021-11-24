@@ -37,7 +37,7 @@ const GitProfile = () => {
                 ])
             })()
     },[])
-console.log(user)
+
     return (
         <div>
             <Card user={user}/>
