@@ -6,6 +6,7 @@ import {
     FormikHelpers
   } from 'formik';
 import { AuthContext } from '../context/AuthContext';
+import styles from './Login.module.css'
 
   interface LoginDTO {
     usuario:string,
@@ -32,16 +33,21 @@ const Login = () => {
                 ) => {
                    setTimeout(() => {
                     alert(JSON.stringify(values, null, 2));
-                   handleLogin()
+                   handleLogin(values)
+                   console.log(values)
                    setSubmitting(false)
                    },1000)
                 }}
             >
-                <Form>
-                <label htmlFor="usuario">Usuario</label>
-                <Field id="usuario" name="usuario" placeholder="First Name" />
-                <label htmlFor="senha">Senha</label>
-                <Field id="senha" name="senha" placeholder="senha" />
+                <Form className={styles.form}>
+                <div>
+                  <label htmlFor="usuario">Usuario </label>
+                  <Field className={styles.input} id="usuario" name="usuario" placeholder="First Name" />
+                </div>
+               <div>
+                  <label htmlFor="senha">Senha </label>
+                  <Field className={styles.input} id="senha" name="senha" placeholder="senha" />
+               </div>
                 <button type="submit">Submit</button>
                 </Form>
             </Formik>
