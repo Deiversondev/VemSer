@@ -19,6 +19,7 @@ const Menu = () => {
                 <ul>
                 <li><Link to="/login">Home</Link></li>
                 <li><Link to="/people">Pessoa</Link></li>
+                {auth && <li><Link to="/create">Cadastrar</Link></li>}
                 {auth && <button className={styles.logout} onClick={handleLogout}>Logout</button>}
             </ul>
                 </div>

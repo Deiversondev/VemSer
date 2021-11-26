@@ -10,6 +10,9 @@ import People from "./pages/People";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { AuthProvider } from './context/AuthContext';
+import { PessoaContext, PessoaProvider } from "./context/PessoaContext";
+import Home from "./pages/Home";
+import Create from "./pages/Create";
 
 
 const routers = () => {
@@ -17,12 +20,16 @@ const routers = () => {
         <div>
             <BrowserRouter>
                  <AuthProvider>
-                    <Header/>
+                   <PessoaProvider>
+                     <Header/>
                         <Routes>
-                            <Route path="login" element={<Login/>}/>
+                            <Route path="/" element={<Home/>}/>
+                            <Route path="/login" element={<Login/>}/>
                             <Route path="/people" element={<People/>}/>
+                            <Route path="/create" element={<Create/>}/>
                         </Routes>
                         <Footer/>
+                   </PessoaProvider>
                  </AuthProvider>
             </BrowserRouter>
         </div>
