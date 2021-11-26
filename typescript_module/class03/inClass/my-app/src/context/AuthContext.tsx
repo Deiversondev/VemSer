@@ -1,6 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import { createContext } from 'react'
 import api from '../api'
+import { useNavigate } from 'react-router'
 
 const AuthContext = createContext({})
 
@@ -13,6 +14,8 @@ const AuthProvider: React.FC<any> = ({children}) => {
 
     const [auth,setAuth] = useState<boolean>(false);
     const [loading,setLoading] = useState<boolean>(true);
+    const navigate = useNavigate()
+
 
         useEffect(() =>{
             const token = localStorage.getItem('token');
@@ -27,8 +30,10 @@ const AuthProvider: React.FC<any> = ({children}) => {
         const handleLogin = async (user:LoginDTO) =>{
             const {data} = await api.post('/auth', user)
             console.log(data)
+            localStorage.setItem('token', data)
             api.defaults.headers.common['Authorization'] = data;
-            window.location.href = '/people';
+            navigate('/people')
+            // window.location.href = '/people';
             setAuth(true);
         }
 
