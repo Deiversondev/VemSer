@@ -21,7 +21,7 @@ const Login = () => {
         <div>
             <h1>Login</h1>
         <div>
-      <h1>My Example</h1>
+      
             <Formik
                 initialValues={{
                     usuario: '',
@@ -31,23 +31,22 @@ const Login = () => {
                 onSubmit={(values:LoginDTO, 
                 {setSubmitting}: FormikHelpers<LoginDTO>
                 ) => {
-                   setTimeout(() => {
-                    alert(JSON.stringify(values, null, 2));
+                   
+                  
                    handleLogin(values)
                    console.log(values)
                    setSubmitting(false)
-                   },1000)
+                  
                 }}
             >
                 <Form className={styles.form}>
-                <div>
-                  <label htmlFor="usuario">Usuario </label>
-                  <Field className={styles.input} id="usuario" name="usuario" placeholder="First Name" />
-                </div>
-               <div>
-                  <label htmlFor="senha">Senha </label>
-                  <Field className={styles.input} id="senha" name="senha" placeholder="senha" />
-               </div>
+              
+                  <label htmlFor="usuario">Usuario</label>
+                  <Field className={styles.input} id="usuario" name="usuario" placeholder="Digite seu username" />
+                
+                  <label htmlFor="senha">Senha</label>
+                  <Field type="password" className={styles.input} id="senha" name="senha" placeholder="Digite sua senha" />
+               
                 <button type="submit">Submit</button>
                 </Form>
             </Formik>

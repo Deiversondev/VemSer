@@ -1,0 +1,36 @@
+footer {
+    width: 99.85%;
+    border: 1px solid #000;
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    transition: all 2s;
+    /* flex-direction: column; */
+}
+
+footer:hover {
+    background-color: #fff;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+}
+
+footer .text {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+small {
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    margin-left: 150px;
+}
