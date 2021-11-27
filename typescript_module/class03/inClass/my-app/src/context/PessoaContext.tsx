@@ -14,7 +14,7 @@ const PessoaContext = createContext<IPessoaContext>({} as IPessoaContext);
 
 const PessoaProvider : React.FC<ReactNode> = ({children}) =>{
   const [list,setList] = useState<Array<PessoaDTO>>([])
-  const [edit,setEdit] = useState(false);
+  const [edit,setEdit] = useState(true);
   const [userEdit,setUserEdit] = useState({} as PessoaDTO)
   
   return(

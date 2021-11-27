@@ -8,6 +8,8 @@ import {
 import { AuthContext } from '../context/AuthContext';
 import styles from './Login.module.css'
 import api from '../api';
+import Card from '../components/Card';
+import { PessoaContext } from '../context/PessoaContext';
 
 export interface PessoasDTO {
     
@@ -19,25 +21,27 @@ export interface PessoasDTO {
    
 }
 
-async function Updat(id:number) {
-   const {data} = await api.get(`/pessoa/${id}`)
-   console.log(data)
-}
-
    
 const Update = () => {
-    const {handleLogin} = useContext<any>(AuthContext);
+    const {handleLogin, navigate} = useContext<any>(AuthContext);
+    const {list,setList,userEdit,setUserEdit,edit,setEdit} = useContext(PessoaContext)
 
     async function getList(){
 
     }
     return (
         <div>
-            <h1>Login</h1>
+            <h1>Editar</h1>
         <div>
       
             <Formik
-                initialValues={{
+                initialValues={ edit ?{
+                    nome:userEdit.nome,
+                    dataNascimento:userEdit.dataNascimento,
+                    email:userEdit.email,
+                    cpf:userEdit.cpf
+
+                }: {
                     nome:'',
                     dataNascimento:'',
                     email:'',
@@ -47,10 +51,12 @@ const Update = () => {
                 onSubmit={async (values:PessoasDTO, 
                 {setSubmitting}: FormikHelpers<PessoasDTO>
                 ) => {
-                   await api.post('/pessoa',values)
+                   await api.put(`/pessoa/${userEdit.idPessoa}`,values)
                    console.log(values)
                    setSubmitting(false)
-                //    await getList()
+                   setTimeout(()=>{
+                    navigate('/')
+                   },500)
                   
                 }}
             >
@@ -68,7 +74,7 @@ const Update = () => {
                   <label htmlFor="cpf">Usuario</label>
                   <Field className={styles.input} id="cpf" name="cpf" placeholder="Digite seu username" />
                
-                <button type="submit">Submit</button>
+                <button  type="submit">Submit</button>
                 </Form>
             </Formik>
             </div>

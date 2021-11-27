@@ -8,6 +8,8 @@ import {
 import { AuthContext } from '../context/AuthContext';
 import styles from './Login.module.css'
 import api from '../api';
+import Card from '../components/Card';
+import { PessoaContext } from '../context/PessoaContext';
 
 export interface PessoasDTO {
     
@@ -22,6 +24,7 @@ export interface PessoasDTO {
    
 const Create = () => {
     const {handleLogin, navigate} = useContext<any>(AuthContext);
+    const {list,setList,userEdit,setUserEdit,edit,setEdit} = useContext(PessoaContext)
 
     async function getList(){
 
@@ -68,6 +71,9 @@ const Create = () => {
                 <button  type="submit">Submit</button>
                 </Form>
             </Formik>
+            </div>
+            <div>
+              <Card />
             </div>
         </div>
     )

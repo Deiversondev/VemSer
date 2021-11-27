@@ -6,7 +6,8 @@ import { AuthContext } from "../context/AuthContext"
 
 const Card = () => {
 
-const {list,setList, userEdit,setUserEdit} = useContext(PessoaContext)
+const {list,setList,edit,setEdit, userEdit,setUserEdit} = useContext(PessoaContext)
+const {handleLogin, navigate} = useContext<any>(AuthContext);
 
 
 
@@ -41,7 +42,7 @@ useEffect(() =>{
                         <p>{pessoa.email}</p>
                         <p>{pessoa.cpf}</p>
                         <button onClick={() => {Deletar(pessoa.idPessoa)}}>Apagar</button>
-                        <button onClick={() => {Updat(pessoa.idPessoa);}}>Atualizar</button>
+                        <button onClick={() => {setUserEdit(pessoa);navigate('/update')}}>Atualizar</button>
                        <br />
                     </div>
                     ))
