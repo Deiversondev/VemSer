@@ -3,6 +3,13 @@ import api from "../api"
 import { PessoaContext } from "../context/PessoaContext"
 import { AuthContext } from "../context/AuthContext"
 import styles from './Card.module.css'
+import { FiEdit } from 'react-icons/fi';
+import {RiDeleteBin2Line} from 'react-icons/ri'
+import {FaUserCircle} from 'react-icons/fa'
+import {BsCalendarDate} from  'react-icons/bs'
+import {MdOutlineAlternateEmail} from 'react-icons/md'
+import {TiBusinessCard} from 'react-icons/ti'
+
 
 const Card = () => {
 
@@ -24,31 +31,33 @@ async function Deletar(id:number) {
 //  }
 
 
-useEffect(() =>{
-    (async()=>{
-        const {data} = await api.get('/pessoa');
-        console.log(data);
-        setList(data)
-        console.log(list)
-    })();
-},[])
+// useEffect(() =>{
+//     (async()=>{
+//         const {data} = await api.get('/pessoa');
+//         console.log(data);
+//         setList(data)
+//         console.log(list)
+//     })();
+// },[])
 
     return (
         <div>
             <div className={styles.cards}>
             { list && (
-                list.map(pessoa => (
-                    <div className={styles.card} >
+                list.map((pessoa,index) => (
+                    <div key={index} className={styles.card} >
+                        <h3 className={styles.user_circle}><FaUserCircle/></h3>
                         <h3>{pessoa.nome}</h3>
                         <div className={styles.card_content}>
-                        <p><span>Data de Nascimento: </span> {pessoa.dataNascimento}</p>
-                        <p><span>Email: </span>{pessoa.email}</p>
-                        <p><span>CPF: </span>{pessoa.cpf}</p>
+                        <p><span><BsCalendarDate/> Data de Nascimento: </span> {pessoa.dataNascimento}</p>
+                        <p><span><MdOutlineAlternateEmail/> Email: </span>{pessoa.email}</p>
+                        <p><span><TiBusinessCard/> CPF: </span>{pessoa.cpf}</p>
+                        
                         </div>
-
+                        
                        <div className={styles.card_btn}>
-                       <button onClick={() => {Deletar(pessoa.idPessoa)}}>Apagar</button>
-                        <button onClick={() => {setUserEdit(pessoa);navigate('/update')}}>Atualizar</button>
+                       <button onClick={() => {Deletar(pessoa.idPessoa)}}>Apagar <RiDeleteBin2Line/></button>
+                        <button onClick={() => {setUserEdit(pessoa);navigate('/update')}}>Editar <FiEdit/></button>
                        </div>
                        <br />
                     </div>

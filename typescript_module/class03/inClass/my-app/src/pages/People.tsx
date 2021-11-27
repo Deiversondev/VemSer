@@ -18,7 +18,6 @@ const People = () => {
     useEffect(() =>{
         (async()=>{
             const {data} = await api.get('/pessoa');
-            console.log(data);
             setList(data)
             console.log(list)
         })();
