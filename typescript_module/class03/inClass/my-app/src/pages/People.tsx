@@ -9,8 +9,6 @@ import Card from '../components/Card';
 
 const People = () => {
     const {list,setList} = useContext(PessoaContext)
-    // const [list,setList] = useState<PessoaDTO['pessoas']>([]);
-
     const {setAuth} = useContext<any>(AuthContext)
 
     useEffect(() => {

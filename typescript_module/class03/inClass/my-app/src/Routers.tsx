@@ -13,6 +13,7 @@ import { AuthProvider } from './context/AuthContext';
 import { PessoaContext, PessoaProvider } from "./context/PessoaContext";
 import Home from "./pages/Home";
 import Create from "./pages/Create";
+import Update from "./pages/Update";
 
 
 const routers = () => {
@@ -27,6 +28,7 @@ const routers = () => {
                             <Route path="/login" element={<Login/>}/>
                             <Route path="/people" element={<People/>}/>
                             <Route path="/create" element={<Create/>}/>
+                            <Route path="/update" element={<Update/>}/>
                         </Routes>
                         <Footer/>
                    </PessoaProvider>

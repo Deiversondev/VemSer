@@ -1,20 +1,25 @@
-import { useContext,useEffect } from "react"
+import { useContext,useEffect , useState} from "react"
 import { PessoaDTO } from "../model/PessoaDTO"
 import api from "../api"
 import { PessoaContext } from "../context/PessoaContext"
+import { AuthContext } from "../context/AuthContext"
 
 const Card = () => {
 
-const {list,setList} = useContext(PessoaContext)
+const {list,setList, userEdit,setUserEdit} = useContext(PessoaContext)
+
+
 
 async function Deletar(id:number) {
     await api.delete(`/pessoa/${id}`)
-    await api.get('/pessoa/')
+          api.get('/pessoa/')
 }
 async function Updat(id:number) {
     const {data} = await api.get(`/pessoa/{idPessoa}?idPessoa=${id}`)
-    console.log(data)
+    setUserEdit(data);
+    console.log(userEdit);
  }
+
 
 useEffect(() =>{
     (async()=>{
@@ -36,7 +41,7 @@ useEffect(() =>{
                         <p>{pessoa.email}</p>
                         <p>{pessoa.cpf}</p>
                         <button onClick={() => {Deletar(pessoa.idPessoa)}}>Apagar</button>
-                        <button onClick={() => {Updat(pessoa.idPessoa)}}>Atualizar</button>
+                        <button onClick={() => {Updat(pessoa.idPessoa);}}>Atualizar</button>
                        <br />
                     </div>
                     ))

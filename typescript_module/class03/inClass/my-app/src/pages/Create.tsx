@@ -21,7 +21,7 @@ export interface PessoasDTO {
 
    
 const Create = () => {
-    const {handleLogin} = useContext<any>(AuthContext);
+    const {handleLogin, navigate} = useContext<any>(AuthContext);
 
     async function getList(){
 
@@ -45,7 +45,9 @@ const Create = () => {
                    await api.post('/pessoa',values)
                    console.log(values)
                    setSubmitting(false)
-                //    await getList()
+                   setTimeout(()=>{
+                    navigate('/')
+                   },500)
                   
                 }}
             >
@@ -63,7 +65,7 @@ const Create = () => {
                   <label htmlFor="cpf">Usuario</label>
                   <Field className={styles.input} id="cpf" name="cpf" placeholder="Digite seu username" />
                
-                <button type="submit">Submit</button>
+                <button  type="submit">Submit</button>
                 </Form>
             </Formik>
             </div>

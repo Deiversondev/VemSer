@@ -13,11 +13,11 @@ nav {
     border-radius: 50%;
     margin-left: 10px;
     margin: 10px;
-    transition: all 5s;
+    transition: all 1s;
 }
 
 .logo:hover {
-    transform: rotate(10turn);
+    transform: rotate(1turn);
 }
 
 .logo img {
