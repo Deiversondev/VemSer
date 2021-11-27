@@ -24,21 +24,6 @@ async function Deletar(id:number) {
         window.location.reload()
 
 }
-// async function Updat(id:number) {
-//     const {data} = await api.get(`/pessoa/{idPessoa}?idPessoa=${id}`)
-//     setUserEdit(data);
-//     console.log(userEdit);
-//  }
-
-
-// useEffect(() =>{
-//     (async()=>{
-//         const {data} = await api.get('/pessoa');
-//         console.log(data);
-//         setList(data)
-//         console.log(list)
-//     })();
-// },[])
 
     return (
         <div>
