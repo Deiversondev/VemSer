@@ -24,7 +24,7 @@ export interface PessoasDTO {
    
 const Create = () => {
     const {handleLogin, navigate} = useContext<any>(AuthContext);
-    const {list,setList,userEdit,setUserEdit,edit,setEdit} = useContext(PessoaContext)
+    // const {list,setList,userEdit,setUserEdit,edit,setEdit} = useContext(PessoaContext)
 
     async function getList(){
 

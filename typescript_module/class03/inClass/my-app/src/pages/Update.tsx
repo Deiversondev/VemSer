@@ -24,7 +24,7 @@ export interface PessoasDTO {
    
 const Update = () => {
     const {handleLogin, navigate} = useContext<any>(AuthContext);
-    const {list,setList,userEdit,setUserEdit,edit,setEdit} = useContext(PessoaContext)
+    const {list,setList,userEdit} = useContext(PessoaContext)
 
     async function getList(){
 
@@ -35,17 +35,11 @@ const Update = () => {
         <div>
       
             <Formik
-                initialValues={ edit ?{
+                initialValues={ {
                     nome:userEdit.nome,
                     dataNascimento:userEdit.dataNascimento,
                     email:userEdit.email,
                     cpf:userEdit.cpf
-
-                }: {
-                    nome:'',
-                    dataNascimento:'',
-                    email:'',
-                    cpf:''
                 }}
 
                 onSubmit={async (values:PessoasDTO, 
@@ -55,8 +49,8 @@ const Update = () => {
                    console.log(values)
                    setSubmitting(false)
                    setTimeout(()=>{
-                    navigate('/')
-                   },500)
+                    navigate('/people')
+                   },10)
                   
                 }}
             >

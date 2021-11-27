@@ -6,14 +6,16 @@ import { AuthContext } from "../context/AuthContext"
 
 const Card = () => {
 
-const {list,setList,edit,setEdit, userEdit,setUserEdit} = useContext(PessoaContext)
+const {list,setList,setEdit, userEdit,setUserEdit} = useContext(PessoaContext)
 const {handleLogin, navigate} = useContext<any>(AuthContext);
 
 
 
 async function Deletar(id:number) {
     await api.delete(`/pessoa/${id}`)
-          api.get('/pessoa/')
+   
+        window.location.reload()
+
 }
 async function Updat(id:number) {
     const {data} = await api.get(`/pessoa/{idPessoa}?idPessoa=${id}`)
