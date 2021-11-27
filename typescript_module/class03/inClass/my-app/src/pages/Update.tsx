@@ -10,21 +10,22 @@ import styles from './Login.module.css'
 import api from '../api';
 import Card from '../components/Card';
 import { PessoaContext } from '../context/PessoaContext';
+import { PessoasDTO } from '../model/PessoaDTO';
 
-export interface PessoasDTO {
+// export interface PessoasDTO {
     
-        cpf:string,
-        dataNascimento:string,
-        email:string,
-        idPessoa?:number,
-        nome:string
+//         cpf:string,
+//         dataNascimento:string,
+//         email:string,
+//         idPessoa?:number,
+//         nome:string
    
-}
+// }
 
    
 const Update = () => {
-    const {handleLogin, navigate} = useContext<any>(AuthContext);
-    const {list,setList,userEdit} = useContext(PessoaContext)
+    const {navigate} = useContext<any>(AuthContext);
+    const {userEdit} = useContext(PessoaContext)
 
     async function getList(){
 
