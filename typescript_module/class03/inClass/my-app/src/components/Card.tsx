@@ -16,12 +16,18 @@ const Card = () => {
 const {list,setList,setEdit, userEdit,setUserEdit} = useContext(PessoaContext)
 const {handleLogin, navigate} = useContext<any>(AuthContext);
 
+// function getPeople(){
+//     api.get('/pessoa')
+// }
+async function getPeople(){
+    const {data} =  await api.get('/pessoa')
+    setList(data)
+}
 
 
 async function Deletar(id:number) {
     await api.delete(`/pessoa/${id}`)
-   
-        window.location.reload()
+        getPeople()
 
 }
 

@@ -45,6 +45,8 @@ const AuthProvider: React.FC<any> = ({children}) => {
             setAuth(false);
         }
 
+     
+
         if(loading){
             return(
                 <h1>Test</h1>
