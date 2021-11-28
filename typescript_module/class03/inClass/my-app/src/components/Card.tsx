@@ -9,6 +9,7 @@ import {FaUserCircle} from 'react-icons/fa'
 import {BsCalendarDate} from  'react-icons/bs'
 import {MdOutlineAlternateEmail} from 'react-icons/md'
 import {TiBusinessCard} from 'react-icons/ti'
+import moment from "moment"
 
 
 const Card = () => {
@@ -40,7 +41,7 @@ async function Deletar(id:number) {
                         <h3 className={styles.user_circle}><FaUserCircle/></h3>
                         <h3>{pessoa.nome}</h3>
                         <div className={styles.card_content}>
-                        <p><span><BsCalendarDate/> Data de Nascimento: </span> {pessoa.dataNascimento}</p>
+                        <p><span><BsCalendarDate/> Data de Nascimento: </span> {moment(pessoa.dataNascimento).format('DD/MM/YYYY')}</p>
                         <p><span><MdOutlineAlternateEmail/> Email: </span>{pessoa.email}</p>
                         <p><span><TiBusinessCard/> CPF: </span>{pessoa.cpf}</p>
                         

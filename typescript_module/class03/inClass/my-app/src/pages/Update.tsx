@@ -64,7 +64,7 @@ const Update = () => {
                   <Field className={styles.input} id="nome" name="nome" placeholder="Digite seu username" />
 
                   <label htmlFor="dataNascimento"><BsCalendarDate/> Data de Nascimento</label>
-                  <Field className={styles.input} id="dataNascimento" name="dataNascimento" placeholder="Digite seu username" />
+                  <Field type="date" className={styles.input} id="dataNascimento" name="dataNascimento" placeholder="Digite seu username" />
                 
                   <label htmlFor="email"><MdOutlineAlternateEmail/> Email</label>
                   <Field type="email" className={styles.input} id="email" name="email" placeholder="Digite sua email" />
