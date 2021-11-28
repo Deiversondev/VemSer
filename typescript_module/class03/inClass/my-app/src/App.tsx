@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
 import Routers from './Routers';
-// import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (
-    <div className="App">
-        {/* <AuthProvider> */}
+    <div className="App">  
           <Routers/>
-        {/* </AuthProvider> */}
     </div>
   );
 }

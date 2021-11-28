@@ -14,6 +14,7 @@ const AuthProvider: React.FC<any> = ({children}) => {
 
     const [auth,setAuth] = useState<boolean>(false);
     const [loading,setLoading] = useState<boolean>(true);
+    const [user,setUser] = useState<any>({})
     const navigate = useNavigate()
 
 
@@ -44,6 +45,8 @@ const AuthProvider: React.FC<any> = ({children}) => {
             setAuth(false);
         }
 
+     
+
         if(loading){
             return(
                 <h1>Test</h1>
@@ -51,7 +54,7 @@ const AuthProvider: React.FC<any> = ({children}) => {
         }
 
     return (
-       <AuthContext.Provider value={{auth,handleLogin, handleLogout,setAuth}}>
+       <AuthContext.Provider value={{auth,handleLogin, handleLogout,setAuth,navigate, user, setUser}}>
            {children}
        </AuthContext.Provider>
     )
