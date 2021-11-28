@@ -17,8 +17,8 @@ const Menu = () => {
             <h1>Test</h1>
                 <div className={styles.links}>
                 <ul>
-                <li><Link to="/login">Home</Link></li>
-                <li><Link to="/people">Pessoa</Link></li>
+                {!auth && <li><Link to="/login">Login</Link></li>}
+                <li><Link to="/people">Pessoas</Link></li>
                 {auth && <li><Link to="/create">Cadastrar</Link></li>}
                 {auth && <button className={styles.logout} onClick={handleLogout}>Logout</button>}
             </ul>

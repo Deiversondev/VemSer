@@ -14,8 +14,8 @@ import moment from "moment"
 
 const Card = () => {
 
-const {list,setList,setEdit, userEdit,setUserEdit} = useContext(PessoaContext)
-const {handleLogin, navigate} = useContext<any>(AuthContext);
+const {list,setList, setUserEdit} = useContext(PessoaContext)
+const { navigate} = useContext<any>(AuthContext);
 
 // function getPeople(){
 //     api.get('/pessoa')
