@@ -13,7 +13,6 @@ interface LoginDTO {
 const AuthProvider: React.FC<any> = ({children}) => {
 
     const [auth,setAuth] = useState<boolean>(false);
-    const [loading,setLoading] = useState(true);
     const [user,setUser] = useState<any>({})
     const navigate = useNavigate()
 
@@ -24,7 +23,7 @@ const AuthProvider: React.FC<any> = ({children}) => {
                 api.defaults.headers.common['Authorization'] = token;
                 setAuth(true)
             }
-            setLoading(false)
+           
             
         },[])
 
@@ -45,16 +44,8 @@ const AuthProvider: React.FC<any> = ({children}) => {
             setAuth(false);
         }
 
-     
-
-        // if(loading){
-        //     return(
-        //         <h1>Test</h1>
-        //     )
-        // }
-
     return (
-       <AuthContext.Provider value={{auth,handleLogin, handleLogout,setAuth,navigate, user, setUser, loading,setLoading}}>
+       <AuthContext.Provider value={{auth,handleLogin, handleLogout,setAuth,navigate, user, setUser}}>
            {children}
        </AuthContext.Provider>
     )

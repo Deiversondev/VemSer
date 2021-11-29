@@ -43,8 +43,7 @@ const Addresss = () => {
                    values.estado = data.uf
                    values.logradouro = data.logradouro
                    values.complemento = data.complemento
-                  
-                   
+                     
                 }}
             >
                 <Form className={styles.form}>

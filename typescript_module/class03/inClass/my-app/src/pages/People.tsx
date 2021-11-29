@@ -1,31 +1,35 @@
 import React from 'react'
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import api from '../api';
-import axios from 'axios';
 import { AuthContext } from '../context/AuthContext';
-import { PessoaDTO } from '../model/PessoaDTO';
 import {PessoaContext} from '../context/PessoaContext'
 import Card from '../components/Card';
+import Loading from '../components/Loading';
 
 const People = () => {
-    const {list,setList} = useContext(PessoaContext)
+    const {list,setList,loading,setLoading} = useContext(PessoaContext)
     const {setAuth} = useContext<any>(AuthContext)
 
     useEffect(() => {
         setAuth(true)
     },[])
-
+    
     useEffect(() =>{
+ 
         (async()=>{
+            setLoading(true)
             const {data} = await api.get('/pessoa');
             setList(data)
+            setLoading(false)
             console.log(list)
         })();
     },[])
 
     return (
         <div>
-            <Card />
+            {
+                loading ? <Loading/> : <Card />
+            }
         </div>
     )
 }
