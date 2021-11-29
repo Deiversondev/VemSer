@@ -34,7 +34,7 @@ const Home = () => {
                           <div className={styles.news_content}>
                             <h3>{n.title}</h3>
                             <p><span>By: </span>{n.author ? n.author : 'Unknown'}</p>
-                            <p><span>Description: </span>{n.description ? n.description : 'Not avaliable, click on Read More , to know about it' }</p>
+                            <p><span>Description: </span>{n.description ? n.description : 'Not avaliable, click on Read More , to get more information about it' }</p>
                           </div>
                             <p className={styles.link}><a href={n.url}>Read More</a></p>
                         </div>

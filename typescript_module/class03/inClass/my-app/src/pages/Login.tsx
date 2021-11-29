@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import {
     Formik,
     Form,
@@ -15,7 +15,12 @@ import styles from './Login.module.css'
 
    
 const Login = () => {
-    const {handleLogin} = useContext<any>(AuthContext);
+    const {handleLogin,auth} = useContext<any>(AuthContext);
+    useEffect(() =>{
+      if(auth){
+        window.location.href = '/'
+      }
+    },[])
 
     return (
         <div>

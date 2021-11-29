@@ -68,7 +68,7 @@ const Create = () => {
                   <Field type="email" className={styles.input} id="email" name="email" placeholder="Digite seu Email" />
 
                   <label htmlFor="cpf"><TiBusinessCard/> CPF</label>
-                  <Field type="number" maxlength="11" className={styles.input} id="cpf" name="cpf" placeholder="Digite seu CPF" />
+                  <Field type="number" maxLength="11" className={styles.input} id="cpf" name="cpf" placeholder="Digite seu CPF" />
                
                <div className={styles.btn}>
                <button  type="submit">Cadastrar</button>

@@ -33,8 +33,8 @@ const AuthProvider: React.FC<any> = ({children}) => {
             console.log(data)
             localStorage.setItem('token', data)
             api.defaults.headers.common['Authorization'] = data;
-            navigate('/people')
-            // window.location.href = '/people';
+            // navigate('/people')
+            window.location.href = '/people';
             setAuth(true);
         }
 
