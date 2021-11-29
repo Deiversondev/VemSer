@@ -1,4 +1,4 @@
-import { useContext,useEffect , useState} from "react"
+import { useContext} from "react"
 import api from "../api"
 import { PessoaContext } from "../context/PessoaContext"
 import { AuthContext } from "../context/AuthContext"
@@ -28,7 +28,7 @@ async function getPeople(){
 
 async function Deletar(id:number) {
     await api.delete(`/pessoa/${id}`)
-        getPeople()
+    getPeople()
 
 }
 

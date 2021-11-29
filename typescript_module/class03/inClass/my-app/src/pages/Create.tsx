@@ -49,27 +49,31 @@ const Create = () => {
                    await api.post('/pessoa',values)
                    console.log(values)
                    setSubmitting(false)
-                   setTimeout(()=>{
-                    navigate('/')
-                   },500)
+                   console.log(values.dataNascimento)
+                  values.nome = ''
+                  values.dataNascimento = ''
+                  values.email = ''
+                  values.cpf = ''
                 }}
             >
                 <Form className={styles.form}>
               
                   <label htmlFor="nome"><FaUserCircle/> Nome</label>
-                  <Field className={styles.input} id="nome" name="nome" placeholder="Digite seu username" />
+                  <Field className={styles.input} id="nome" name="nome" placeholder="Digite seu Nome" />
 
                   <label htmlFor="dataNascimento"><BsCalendarDate/> Data de Nascimento</label>
-                  <Field type="date" className={styles.input} id="dataNascimento" name="dataNascimento" placeholder="Digite seu username" />
+                  <Field type="date" className={styles.input} id="dataNascimento" name="dataNascimento" />
                 
                   <label htmlFor="email"><MdOutlineAlternateEmail/> Email</label>
-                  <Field type="email" className={styles.input} id="email" name="email" placeholder="Digite sua email" />
+                  <Field type="email" className={styles.input} id="email" name="email" placeholder="Digite seu Email" />
 
                   <label htmlFor="cpf"><TiBusinessCard/> CPF</label>
-                  <Field className={styles.input} id="cpf" name="cpf" placeholder="Digite seu username" />
+                  <Field type="number" maxlength="11" className={styles.input} id="cpf" name="cpf" placeholder="Digite seu CPF" />
                
-                <button  type="submit">Cadastrar</button>
+               <div className={styles.btn}>
+               <button  type="submit">Cadastrar</button>
                 <button onClick={() => navigate('/')} type="submit">Cancelar</button>
+               </div>
                 </Form>
             </Formik>
             </div>

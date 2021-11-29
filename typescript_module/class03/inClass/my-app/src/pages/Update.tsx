@@ -3,7 +3,8 @@ import {
     Formik,
     Form,
     Field,
-    FormikHelpers
+    FormikHelpers,
+    FormikErrors
   } from 'formik';
 import { AuthContext } from '../context/AuthContext';
 import styles from './Login.module.css'
@@ -30,6 +31,13 @@ const Update = () => {
     const {navigate} = useContext<any>(AuthContext);
     const {userEdit} = useContext(PessoaContext)
 
+    // const validate = (values: PessoasDTO) =>{
+    //     let errors: FormikErrors<PessoasDTO> = {}
+    //     if (!values.email){
+    //         errors.email = 'Required'
+    //     } 
+    // }
+
     async function getList(){
 
     }
@@ -49,31 +57,37 @@ const Update = () => {
                 onSubmit={async (values:PessoasDTO, 
                 {setSubmitting}: FormikHelpers<PessoasDTO>
                 ) => {
-                   await api.put(`/pessoa/${userEdit.idPessoa}`,values)
-                   console.log(values)
-                   setSubmitting(false)
-                   setTimeout(()=>{
-                    navigate('/people')
-                   },10)
+                  try{
+                    await api.put(`/pessoa/${userEdit.idPessoa}`,values)
+                    console.log(values)
+                    setSubmitting(false)
+                    setTimeout(()=>{
+                     navigate('/people')
+                    },1)
+                  }catch(err){
+                      alert('Você digitou algo errado!')
+                  }
                   
                 }}
             >
                 <Form className={styles.form}>
               
                 <label htmlFor="nome"><FaUserCircle/> Nome</label>
-                  <Field className={styles.input} id="nome" name="nome" placeholder="Digite seu username" />
+                  <Field className={styles.input} id="nome" name="nome" placeholder="Digite seu Nome" />
 
                   <label htmlFor="dataNascimento"><BsCalendarDate/> Data de Nascimento</label>
-                  <Field type="date" className={styles.input} id="dataNascimento" name="dataNascimento" placeholder="Digite seu username" />
+                  <Field type="date" className={styles.input} id="dataNascimento" name="dataNascimento" />
                 
                   <label htmlFor="email"><MdOutlineAlternateEmail/> Email</label>
-                  <Field type="email" className={styles.input} id="email" name="email" placeholder="Digite sua email" />
-
+                  <Field type="email" className={styles.input} id="email" name="email"  placeholder="Digite seu Email" />
+                  
                   <label htmlFor="cpf"><TiBusinessCard/> CPF</label>
-                  <Field className={styles.input} id="cpf" name="cpf" placeholder="Digite seu username" />
+                  <Field className={styles.input} id="cpf" name="cpf" placeholder="Digite seu CPF" />
                
-                <button  type="submit">Salvar</button>
+               <div className={styles.btn}>
+               <button  type="submit">Salvar</button>
                 <button onClick={() => navigate('/people')} type="submit">Cancelar</button>
+               </div>
                 </Form>
             </Formik>
             </div>

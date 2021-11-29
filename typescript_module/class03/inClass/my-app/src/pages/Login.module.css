@@ -1,6 +1,7 @@
 .form {
     display: flex;
     border: 1px solid #000;
+    border-radius: 5px;
     flex-direction: column;
     align-items: center;
     margin: auto;
@@ -40,6 +41,20 @@ button {
     margin: 10px 0px;
 }
 
+.btn {
+    display: flex;
+    width: 30%;
+    margin: auto;
+    justify-content: space-evenly;
+    /* border: 1px solid #000; */
+}
+
 
 /* h1:hover {
 } */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

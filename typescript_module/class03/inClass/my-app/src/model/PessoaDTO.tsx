@@ -15,3 +15,12 @@ export interface PessoasDTO {
         nome:string
    
 }
+
+export interface newsDTO{
+        author:string,
+        title:string,
+        description:string,
+        urlToImage:string,
+        content:string
+        url:string
+}
