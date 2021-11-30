@@ -31,16 +31,6 @@ const Update = () => {
     const {navigate} = useContext<any>(AuthContext);
     const {userEdit} = useContext(PessoaContext)
 
-    // const validate = (values: PessoasDTO) =>{
-    //     let errors: FormikErrors<PessoasDTO> = {}
-    //     if (!values.email){
-    //         errors.email = 'Required'
-    //     } 
-    // }
-
-    async function getList(){
-
-    }
     return (
         <div>
             <h1>Editar</h1>
@@ -57,6 +47,8 @@ const Update = () => {
                 onSubmit={async (values:PessoasDTO, 
                 {setSubmitting}: FormikHelpers<PessoasDTO>
                 ) => {
+
+                   
                   try{
                     await api.put(`/pessoa/${userEdit.idPessoa}`,values)
                     console.log(values)

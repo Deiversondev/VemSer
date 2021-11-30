@@ -46,14 +46,24 @@ const Create = () => {
                 onSubmit={async (values:PessoasDTO, 
                 {setSubmitting}: FormikHelpers<PessoasDTO>
                 ) => {
-                   await api.post('/pessoa',values)
-                   console.log(values)
-                   setSubmitting(false)
-                   console.log(values.dataNascimento)
-                  values.nome = ''
-                  values.dataNascimento = ''
-                  values.email = ''
-                  values.cpf = ''
+                    try{
+                        await api.post('/pessoa',values)
+                        console.log(values)
+                        setSubmitting(false)
+                        console.log(values.dataNascimento)
+                       values.nome = ''
+                       values.dataNascimento = ''
+                       values.email = ''
+                       values.cpf = ''
+                       let keepOnThePage = window.confirm('Você gostaria de fazer outro cadastro?')
+                       setTimeout(() =>{
+                         if (!keepOnThePage) {
+                             window.location.href = '/'  
+                           }
+                       },10)
+                    } catch(error){
+                        alert('Algum dado dos dados digitados não está correto! Corrija o erro e tente novamente')
+                    }
                 }}
             >
                 <Form className={styles.form}>

@@ -1,5 +1,9 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #b1fcf8;
+    /* background-color: #b1fcf8; */
+}
+
+.notFound {
+    width: 100%;
 }

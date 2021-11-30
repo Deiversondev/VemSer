@@ -27,6 +27,8 @@ const People = () => {
 
     return (
         <div>
+
+            <h1>Pessoas</h1>
             {
                 loading ? <Loading/> : <Card />
             }

@@ -22,6 +22,7 @@ const Menu = () => {
                 {auth && <li><Link to="/people">Pessoas</Link></li>}
                 {auth && <li><Link to="/create">Cadastrar</Link></li>}
                 {auth && <button className={styles.logout} onClick={handleLogout}>Logout</button>}
+                
             </ul>
                 </div>
             </nav>

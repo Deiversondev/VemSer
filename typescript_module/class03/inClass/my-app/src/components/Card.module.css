@@ -39,18 +39,26 @@
 }
 
 .card_btn {
-    width: 60%;
+    width: 90%;
     display: flex;
     margin: auto;
     justify-content: space-around;
+    /* border: 1px solid #fff; */
+    margin-top: 5px;
 }
 
 .card_btn button:first-child {
     color: #fff;
-    background-color: #ff0000;
+    background-color: #006eff;
 }
 
 .card_btn button:nth-child(2) {
     color: #fff;
-    background-color: #006eff;
+    width: 100px;
+    background-color: #29c029;
+}
+
+.card_btn button:nth-child(3) {
+    color: #fff;
+    background-color: #ff0000;
 }

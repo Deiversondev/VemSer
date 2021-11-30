@@ -7,16 +7,18 @@ import {
 import styles from './Login.module.css'
 import { Address } from '../model/AddressDTO';
 import axios from 'axios';
-
-
+import { AuthContext } from '../context/AuthContext';
+import { useContext } from 'react';
 
    
 const Addresss = () => {
 
+    const {navigate} = useContext<any>(AuthContext)
+
 
     return (
         <div>
-            <h1>Cadastrar</h1>
+            <h1>Endereço</h1>
         <div>
       
             <Formik
@@ -49,19 +51,19 @@ const Addresss = () => {
                 <Form className={styles.form}>
               
                   <label htmlFor="cep">Cep</label>
-                  <Field className={styles.input} id="cep" name="cep" placeholder="Digite seu Nome" />
+                  <Field className={styles.input} id="cep" name="cep" placeholder="Digite seu Cep" />
 
                   <label htmlFor="cidade"> Cidade</label>
-                  <Field  className={styles.input} id="cidade" name="cidade" />
+                  <Field  className={styles.input} id="cidade" name="cidade"  />
                 
                   <label htmlFor="complemento"> Complemento</label>
-                  <Field type="complemento" className={styles.input} id="complemento" name="complemento" placeholder="Digite seu Email" />
+                  <Field type="complemento" className={styles.input} id="complemento" name="complemento"  />
 
-                  <label htmlFor="estado">CPF</label>
-                  <Field  className={styles.input} id="estado" name="estado" placeholder="Digite seu CPF" />
+                  <label htmlFor="estado">Estado</label>
+                  <Field  className={styles.input} id="estado" name="estado"  />
 
                   <label htmlFor="logradouro">Logradouro</label>
-                  <Field  className={styles.input} id="logradouro" name="logradouro" />
+                  <Field  className={styles.input} id="logradouro" name="logradouro"  />
 
                   <label htmlFor="number"> Número</label>
                   <Field  className={styles.input} id="number" name="number" />
@@ -71,7 +73,7 @@ const Addresss = () => {
                
                <div className={styles.btn}>
                <button  type="submit">Cadastrar</button>
-                <button type="submit">Cancelar</button>
+                <button onClick={() => navigate('/people')} type="submit">Voltar</button>
                </div>
                 </Form>
             </Formik>

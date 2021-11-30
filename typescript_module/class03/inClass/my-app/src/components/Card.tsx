@@ -9,6 +9,7 @@ import {FaUserCircle} from 'react-icons/fa'
 import {BsCalendarDate} from  'react-icons/bs'
 import {MdOutlineAlternateEmail} from 'react-icons/md'
 import {TiBusinessCard} from 'react-icons/ti'
+import {BsHouseDoor} from 'react-icons/bs'
 import moment from "moment"
 
 
@@ -25,10 +26,25 @@ async function getPeople(){
     setList(data)
 }
 
+function searchCep(){
+    window.location.href = '/address'
+}
+
 
 async function Deletar(id:number) {
-    await api.delete(`/pessoa/${id}`)
-    getPeople()
+
+    let beSure = window.confirm('Você tem certeza que deseja excluir esse usuário?')
+    if (beSure) {
+        await api.delete(`/pessoa/${id}`)
+        getPeople()
+        setTimeout(()=>{
+            alert('Usuário deletado com sucesso!')
+        },1100)
+
+    }
+    else{
+        alert('Operação cancelada')
+    }
 
 }
 
@@ -48,8 +64,9 @@ async function Deletar(id:number) {
                         </div>
                         
                        <div className={styles.card_btn}>
-                       <button onClick={() => {Deletar(pessoa.idPessoa)}}>Apagar <RiDeleteBin2Line/></button>
                         <button onClick={() => {setUserEdit(pessoa);navigate('/update')}}>Editar <FiEdit/></button>
+                        <button onClick={searchCep}>Endereço <BsHouseDoor/></button>
+                        <button onClick={() => {Deletar(pessoa.idPessoa)}}>Apagar <RiDeleteBin2Line/></button>
                        </div>
                        <br />
                     </div>

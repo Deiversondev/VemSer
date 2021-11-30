@@ -1,0 +1,13 @@
+.loading_svg {
+    /* border: 1px solid #000; */
+    width: 60%;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.loading_svg img {
+    width: 50%;
+}

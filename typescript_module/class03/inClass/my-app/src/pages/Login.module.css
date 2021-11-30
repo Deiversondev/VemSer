@@ -24,7 +24,7 @@
 }
 
 input::placeholder {
-    padding: 20px;
+    padding: 10px;
     color: #000;
     font-weight: 600;
 }
@@ -48,6 +48,26 @@ button {
     margin: auto;
     justify-content: space-evenly;
     /* border: 1px solid #000; */
+}
+
+.btn button:first-child {
+    background-color: #1685ed;
+    color: #fff;
+}
+
+.btn button:first-child:hover {
+    background-color: #0456a3;
+    color: #fff;
+}
+
+.btn button:nth-of-type(2) {
+    background-color: #ed1616;
+    color: #fff;
+}
+
+.btn button:nth-of-type(2):hover {
+    background-color: #ca3636;
+    color: #fff;
 }
 
 

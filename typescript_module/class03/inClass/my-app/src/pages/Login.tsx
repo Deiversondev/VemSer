@@ -7,6 +7,8 @@ import {
   } from 'formik';
 import { AuthContext } from '../context/AuthContext';
 import styles from './Login.module.css'
+import {FaUserCircle} from 'react-icons/fa'
+import {RiLockPasswordFill} from 'react-icons/ri'
 
   interface LoginDTO {
     usuario:string,
@@ -46,10 +48,10 @@ const Login = () => {
             >
                 <Form className={styles.form}>
               
-                  <label htmlFor="usuario">Usuario</label>
+                  <label htmlFor="usuario"><FaUserCircle/> Usuario </label>
                   <Field className={styles.input} id="usuario" name="usuario" placeholder="Digite seu username" />
                 
-                  <label htmlFor="senha">Senha</label>
+                  <label htmlFor="senha"><RiLockPasswordFill/> Senha </label>
                   <Field type="password" className={styles.input} id="senha" name="senha" placeholder="Digite sua senha" />
                
                 <button type="submit">Submit</button>

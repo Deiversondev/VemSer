@@ -1,7 +1,6 @@
 import React, {createContext,ReactNode,useState} from "react"
 import { PessoaDTO } from "../model/PessoaDTO"
 import {newsDTO} from '../model/PessoaDTO'
-import {Address} from '../model/AddressDTO'
 
 interface IPessoaContext{
   list:Array<PessoaDTO>;

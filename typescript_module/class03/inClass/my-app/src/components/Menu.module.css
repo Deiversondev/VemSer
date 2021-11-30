@@ -13,11 +13,11 @@ nav {
     border-radius: 50%;
     margin-left: 10px;
     margin: 10px;
-    transition: all 1s;
+    transition: all 2s;
 }
 
 .logo:hover {
-    transform: rotate(1turn);
+    transform: rotate(3turn);
 }
 
 .logo img {
@@ -30,6 +30,8 @@ nav {
 
 .links ul {
     display: flex;
+    /* position: relative;
+    top: 10px; */
 }
 
 .links ul li,
