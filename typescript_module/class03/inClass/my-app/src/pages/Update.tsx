@@ -74,7 +74,7 @@ const Update = () => {
                   <Field type="email" className={styles.input} id="email" name="email"  placeholder="Digite seu Email" />
                   
                   <label htmlFor="cpf"><TiBusinessCard/> CPF</label>
-                  <Field className={styles.input} id="cpf" name="cpf" placeholder="Digite seu CPF" />
+                  <Field   maxLength={11}className={styles.input} id="cpf" name="cpf" placeholder="Digite seu CPF" />
                
                <div className={styles.btn}>
                <button  type="submit">Salvar</button>
