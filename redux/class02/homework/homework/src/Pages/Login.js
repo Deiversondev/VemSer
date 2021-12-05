@@ -4,27 +4,28 @@ import { useState } from 'react'
 import {connect} from 'react-redux'
 import { handleLogin } from '../actions/AuthActions'
 import {handleLogout } from '../actions/AuthActions'
+import { useNavigate } from 'react-router'
 
 function Login({auth,dispatch}) {
 
-    
+    const navigate = useNavigate()
 
-    const [user , setUser ] = useState([])
+
     console.log(auth)
     const formik = useFormik({
         initialValues: {
             usuario:'',
             senha:''
         }, onSubmit: async (values) =>{
-                user.push({
-                    usuario:values.usuario,
-                     senha:values.senha
-                })
+               
+                setTimeout(() =>{
+                    navigate('/people')
+                },10)
                 
             handleLogin(values,dispatch)
             
                 formik.resetForm()
-                console.log(user)
+               
         }
     })
 

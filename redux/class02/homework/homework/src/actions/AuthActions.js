@@ -2,6 +2,7 @@ import api from "../api"
 
 export const handleLogin = async(values,dispatch) =>{
     const {data} = await api.post('/auth',values)
+    api.defaults.headers.common['Authorization'] = data
     if(data){
         console.log(data)
         localStorage.setItem('token',data)
