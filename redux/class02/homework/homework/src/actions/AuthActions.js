@@ -28,7 +28,7 @@ export const handleLogout = (auth,dispatch) =>{
             loading:false
         }
         dispatch(loggedOut)
-        console.log(loggedOut)
+        console.log(loggedOut.auth)
         console.log('test')
     }
 }

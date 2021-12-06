@@ -1,0 +1,18 @@
+nav {
+    background-color: rgb(29, 51, 218);
+}
+
+ul {
+    display: flex;
+    border: 1px solid #000;
+    justify-content: space-between;
+    /* width: 60%; */
+    margin-left: auto;
+}
+
+ul li,
+li a {
+    list-style: none;
+    color: #fff;
+    text-decoration: none;
+}

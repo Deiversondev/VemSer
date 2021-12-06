@@ -3,6 +3,7 @@ const INITIAL_STATE = {
 }
 
 const PeopleReducer = (state = INITIAL_STATE,action) => {
+    
     if (action.type === 'SET_PEOPLE') {
         return {
             person:action.data

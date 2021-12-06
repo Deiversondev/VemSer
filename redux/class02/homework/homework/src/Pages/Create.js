@@ -16,17 +16,14 @@ function Create() {
             cpf:''
         }, onSubmit: async (values) =>{
             await api.post('pessoa', values)
-            values.nome = ''
-            values.dataNascimento = ''
-            values.email = ''
-            values.cpf = ''
-            console.log(values)
+            // values.nome = ''
+            // values.dataNascimento = ''
+            // values.email = ''
+            // values.cpf = ''
                 formik.resetForm()
                
         }
     })
-
-
 
     return (
    

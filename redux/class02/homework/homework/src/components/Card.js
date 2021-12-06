@@ -1,12 +1,13 @@
 import moment from "moment";
+import styles from './Card.module.css'
 
 
 function Card({dispatch,erase,editPerson,person,goToPage}) {
     return (
-        <div>
+        <div className={styles.cards_container}>
             {
                 person && person.map(p => (
-                    <div>
+                    <div className={styles.card}>
                         <h3>{p.nome}</h3>
                         <p>{moment(p.dataNascimento).format('DD/MM/YYYY')}</p>
                         <p>{p.email}</p>

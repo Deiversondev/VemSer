@@ -17,7 +17,10 @@ function AuthReducer(state = INITIAL_STATE,action){
             }
         }
     }
-    return state;
+    else {
+        return {auth:{INITIAL_STATE}}
+    }
+    // return state;
 }
 
 export default AuthReducer

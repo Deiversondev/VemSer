@@ -15,20 +15,10 @@ import {BsCalendarDate} from  'react-icons/bs'
 import {MdOutlineAlternateEmail} from 'react-icons/md'
 import {TiBusinessCard} from 'react-icons/ti'
 
-// export interface PessoasDTO {
-    
-//         cpf:string,
-//         dataNascimento:string,
-//         email:string,
-//         idPessoa?:number,
-//         nome:string
-   
-// }
-
    
 const Create = () => {
 
-    const {handleLogin, navigate} = useContext<any>(AuthContext);
+    const {navigate} = useContext<any>(AuthContext);
 
     return (
         <div>
