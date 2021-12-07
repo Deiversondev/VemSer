@@ -55,9 +55,7 @@ function Login({auth,dispatch}) {
                     </div>
                 </div>
             </form>
-                {/* <div >
-                <button onClick={() => handleLogout(auth,dispatch)}>LogOut</button>
-                </div> */}
+
         </div> 
             
         </>

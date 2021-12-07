@@ -1,9 +1,10 @@
 import React from 'react'
+import MainImage from '../images/dbc.jpg'
 
 function Home() {
     return (
         <div>
-            <h1>Hello</h1>
+            <img className='main_img' src={MainImage} alt="" />
         </div>
     )
 }

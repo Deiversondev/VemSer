@@ -11,6 +11,7 @@ import Login from "./Pages/Login";
 import People from "./Pages/People";
 import Edit from "./Pages/Edit";
 import Create from "./Pages/Create";
+import NotFound from './components/NotFound'
 
 
 const Routers = ({auth,dispatch}) => {
@@ -38,13 +39,24 @@ const Routers = ({auth,dispatch}) => {
        <div>
            <BrowserRouter>
            <Header/>
-            <Routes>
-                <Route path='/' element={<Home/>}></Route>
-                <Route path='/login' element={<Login/>}></Route>
-                <Route path='/people' element={<People/>}></Route>
-                <Route path='/form' element={<Edit/>}></Route>
-                <Route path='/create' element={<Create/>}></Route>
-            </Routes>
+                {
+                    auth.auth ? (
+                        <Routes>
+                        <Route path='/' element={<Home/>}></Route>
+                        <Route path='/login' element={<Login/>}></Route>
+                        <Route path='/people' element={<People/>}></Route>
+                        <Route path='/form' element={<Edit/>}></Route>
+                        <Route path='/create' element={<Create/>}></Route>
+                        <Route path="*" element={<NotFound/>}/>
+                    </Routes>
+                    ) : (
+                        <Routes>
+                        <Route path='/' element={<Home/>}></Route>
+                        <Route path='/login' element={<Login/>}></Route>
+                        <Route path="*" element={<NotFound/>}/>
+                    </Routes>
+                    )
+                }
        </BrowserRouter>
        </div>
     )

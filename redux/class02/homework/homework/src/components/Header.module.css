@@ -21,3 +21,23 @@ li a {
     text-decoration: none;
     margin-right: 10px;
 }
+
+.logo {
+    width: 50px;
+    border-radius: 50%;
+    transition: all 2s;
+    margin-left: 10px;
+}
+
+.logo:hover {
+    transform: translate(800px);
+}
+
+.logOutBtn {
+    height: 30px;
+    margin-right: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
