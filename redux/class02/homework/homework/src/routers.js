@@ -2,8 +2,7 @@ import React, { useEffect} from "react";
 import {
   BrowserRouter,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Header from "./components/Header";
 import { connect } from "react-redux"

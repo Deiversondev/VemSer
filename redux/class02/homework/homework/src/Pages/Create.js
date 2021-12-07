@@ -15,7 +15,7 @@ function Create() {
         if (!values.nome) {
           errors.nome = 'Nome Obrigatório';
         } else if (!/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/.test(values.nome)) {
-          errors.nome = 'Números ou espaços não são permitidos';
+          errors.nome = 'Números não são permitidos';
         }else if(values.nome.length > 32){
           errors.nome = 'Permitido apenas 32 caracteres';
         };
@@ -28,9 +28,9 @@ function Create() {
          if(values.nome.length > 32){
           errors.nome = 'Permitido apenas 32 caracteres';
         };
-        if((values.cpf.length > 11) || (values.cpf.length < 11)){
-            errors.cpf = 'Digite um CPF válido';
-          };
+        if((values.cpf.length !== 11)){
+          errors.cpf = 'Digite um CPF válido';
+        };
         
     
         if (!values.email) {
@@ -94,14 +94,14 @@ function Create() {
                     <div >
                         <h4 htmlFor="email">Email</h4>
                         <input type="text" name="email" id="email" placeholder="Digite seu sobrenome" onChange={formik.handleChange} value={formik.values.email} />
-                        {formik.errors.email ? <p>Email Invalido</p> : null}
+                        {formik.errors.email ? <p className={styles.errors}>Email Invalido</p> : null}
                       
                     </div>
 
                     <div >
                         <h4 htmlFor="cpf">CPF</h4>
-                        <input type="text" name="cpf" id="cpf" placeholder="Digite seu sobrenome" onChange={formik.handleChange} value={formik.values.cpf} />
-                        {formik.errors.cpf ? <p>Test</p> : null}
+                        <input type="text" maxLength={11} name="cpf" id="cpf" placeholder="Digite seu sobrenome" onChange={formik.handleChange} value={formik.values.cpf} />
+                        {formik.errors.cpf ? <p className={styles.errors} >{formik.errors.cpf}</p> : null}
                         
                     </div>
 
