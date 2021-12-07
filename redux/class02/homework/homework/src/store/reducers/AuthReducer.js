@@ -13,14 +13,18 @@ function AuthReducer(state = INITIAL_STATE,action){
             auth:{
                 token:action.token,
                 auth: action.auth,
-                loading:action
+                loading:action.loading
             }
         }
     }
-    else {
-        return {auth:{INITIAL_STATE}}
+    else if(action.type === 'SET_LOGOUT') {
+        return {  auth:{
+            token:action.token,
+            auth: action.auth,
+            loading:action.loading
+        }}
     }
-    // return state;
+    return state;
 }
 
 export default AuthReducer

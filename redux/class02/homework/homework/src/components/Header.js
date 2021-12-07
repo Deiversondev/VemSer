@@ -17,7 +17,7 @@ function Header({auth,dispatch}) {
                          auth.auth && (
                              <>
                              <li><Link to='/people'>Pessoas</Link></li>
-                             <li><Link to='/create'>Form2</Link></li>
+                             <li><Link to='/create'>Cadastrar</Link></li>
                             <button onClick={() => handleLogout(auth,dispatch)}>LogOut</button> 
                               </>
                          )

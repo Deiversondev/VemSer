@@ -1,13 +1,17 @@
 nav {
     background-color: rgb(29, 51, 218);
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 
 ul {
     display: flex;
-    border: 1px solid #000;
-    justify-content: space-between;
+    /* border: 1px solid #fff; */
+    /* justify-content: space-between; */
     /* width: 60%; */
     margin-left: auto;
+    height: 20px;
 }
 
 ul li,
@@ -15,4 +19,5 @@ li a {
     list-style: none;
     color: #fff;
     text-decoration: none;
+    margin-right: 10px;
 }

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, { useEffect} from "react";
 import {
   BrowserRouter,
   Routes,
@@ -10,7 +10,6 @@ import { connect } from "react-redux"
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import People from "./Pages/People";
-import api from "./api";
 import Edit from "./Pages/Edit";
 import Create from "./Pages/Create";
 
@@ -27,7 +26,7 @@ const Routers = ({auth,dispatch}) => {
                 auth:true,
                 loading:false
             }
-           alert('logged')
+        //    alert('logged')
             dispatch(logged)
         }else{
             alert('Error!')

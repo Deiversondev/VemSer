@@ -1,9 +1,8 @@
-import api from '../api'
+
 import { useFormik} from 'formik'
-import { useState } from 'react'
+import styles from './Form.module.css'
 import {connect} from 'react-redux'
 import { handleLogin } from '../actions/AuthActions'
-import {handleLogout } from '../actions/AuthActions'
 import { useNavigate } from 'react-router'
 
 function Login({auth,dispatch}) {
@@ -20,7 +19,8 @@ function Login({auth,dispatch}) {
                
                 setTimeout(() =>{
                     navigate('/people')
-                },10)
+                    window.location.reload()
+                },1000)
                 
             handleLogin(values,dispatch)
             
@@ -31,8 +31,8 @@ function Login({auth,dispatch}) {
 
     return (
         <>
-       
-            <div>
+            <h1>Login</h1>
+            <div className={styles.form}>
             <form onSubmit={formik.handleSubmit}>
                 <div ></div>
                 <div >
@@ -49,15 +49,15 @@ function Login({auth,dispatch}) {
                       
                     </div>
 
-                    <div >
+                    <div className={styles.btn}>
                         <button  type="submit"> Login </button>
                       
                     </div>
                 </div>
             </form>
-                <div >
+                {/* <div >
                 <button onClick={() => handleLogout(auth,dispatch)}>LogOut</button>
-                </div>
+                </div> */}
         </div> 
             
         </>

@@ -13,8 +13,6 @@ export const handleLogin = async(values,dispatch) =>{
             loading:false
         }
         dispatch(logged)
-    }else{
-        alert('Error!')
     }
 }
 

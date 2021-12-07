@@ -21,9 +21,10 @@ const navigate = useNavigate()
         navigate('/form')
     },300)
    }
-
+   
    async function erase(id){
     await api.delete(`/pessoa/${id}`)
+    GetPerson(dispatch)
    }
 
 //    async function getUser (id){
@@ -36,6 +37,8 @@ const navigate = useNavigate()
 
     return (
         <div>
+
+            <h1>Pessoas</h1>
             {
                
                     <div>
