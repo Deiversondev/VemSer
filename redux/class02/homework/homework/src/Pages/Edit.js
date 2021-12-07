@@ -16,12 +16,7 @@ function AddEdit({edit,dispatch}) {
         }else if(values.nome.length > 32){
           errors.nome = 'Permitido apenas 32 caracteres';
         };
-    
-        // if (!values.lastName) {
-        //   errors.lastName = 'Sobrenome Obrigatório';
-        // } else if (!/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/.test(values.lastName)) {
-        //   errors.lastName = 'Números não são permitidos';
-        // }
+
          if(values.nome.length > 32){
           errors.nome = 'Permitido apenas 32 caracteres';
         };
@@ -36,15 +31,6 @@ function AddEdit({edit,dispatch}) {
           errors.email = 'Email Invalido';
         };
     
-        // if (!values.address) {
-        //   errors.address = 'Endereço Obrigatório';
-        // };
-    
-        // if(!values.cellPhoneNumber){
-        //   errors.cellPhoneNumber = 'Número Obrigatório';
-        // }else if(/_/.test(values.cellPhoneNumber)){
-        //   errors.cellPhoneNumber = 'Digite todos os números';
-        // };
     
         return errors;
       };
@@ -95,19 +81,19 @@ function AddEdit({edit,dispatch}) {
                     </div>
                     <div >
                         <h4 htmlFor="dataNascimento">Data de Nascimento</h4>
-                        <input type="text" name="dataNascimento" type="date"id="dataNascimento" placeholder="Digite seu sobrenome" onChange={formik.handleChange} value={formik.values.dataNascimento} />
+                        <input type="text" name="dataNascimento" type="date"id="dataNascimento"  onChange={formik.handleChange} value={formik.values.dataNascimento} />
                       
                     </div>
                     <div >
                         <h4 htmlFor="email">Email</h4>
-                        <input type="text" name="email" id="email" placeholder="Digite seu sobrenome" onChange={formik.handleChange} value={formik.values.email} />
+                        <input type="text" name="email" id="email" placeholder="Digite seu email" onChange={formik.handleChange} value={formik.values.email} />
                         {formik.errors.email ? <p className={styles.errors}>Email Invalido</p> : null}
                       
                     </div>
 
                     <div >
                         <h4 htmlFor="cpf">CPF</h4>
-                        <input type="text" maxLength={11} name="cpf" id="cpf" placeholder="Digite seu sobrenome" onChange={formik.handleChange} value={formik.values.cpf} />
+                        <input type="text" maxLength={11} name="cpf" id="cpf" placeholder="Digite seu CPF" onChange={formik.handleChange} value={formik.values.cpf} />
                         {formik.errors.cpf ? <p className={styles.errors} >{formik.errors.cpf}</p> : null}
                       
                     </div>

@@ -12,6 +12,7 @@ import People from "./Pages/People";
 import Edit from "./Pages/Edit";
 import Create from "./Pages/Create";
 import NotFound from './components/NotFound'
+import Addresss from "./Pages/Address";
 
 
 const Routers = ({auth,dispatch}) => {
@@ -28,8 +29,6 @@ const Routers = ({auth,dispatch}) => {
             }
         //    alert('logged')
             dispatch(logged)
-        }else{
-            alert('Error!')
         }
         
     },[])
@@ -47,6 +46,7 @@ const Routers = ({auth,dispatch}) => {
                         <Route path='/people' element={<People/>}></Route>
                         <Route path='/form' element={<Edit/>}></Route>
                         <Route path='/create' element={<Create/>}></Route>
+                        <Route path='/address' element={<Addresss/>}></Route>
                         <Route path="*" element={<NotFound/>}/>
                     </Routes>
                     ) : (

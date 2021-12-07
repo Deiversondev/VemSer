@@ -39,13 +39,13 @@ function Login({auth,dispatch}) {
 
                     <div >
                         <h4 htmlFor="usuario">Nome</h4>
-                        <input type="text" name="usuario" id="usuario" placeholder="Digite seu nome" onChange={formik.handleChange} value={formik.values.usuario} />
+                        <input type="text" name="usuario" id="usuario" placeholder="Digite seu username" onChange={formik.handleChange} value={formik.values.usuario} />
                        
                     </div>
 
                     <div >
                         <h4 htmlFor="senha">Sobrenome</h4>
-                        <input type="text" name="senha" id="senha" placeholder="Digite seu sobrenome" onChange={formik.handleChange} value={formik.values.senha} />
+                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" onChange={formik.handleChange} value={formik.values.senha} />
                       
                     </div>
 

@@ -17,6 +17,7 @@ function Header({auth,dispatch}) {
                              <>
                              <li><Link to='/people'>Pessoas</Link></li>
                              <li><Link to='/create'>Cadastrar</Link></li>
+                             <li><Link to='/address'>Endereço</Link></li>
                             <button className={styles.logOutBtn} onClick={() => handleLogout(auth,dispatch)}>LogOut</button> 
                               </>
                          )
