@@ -6,6 +6,10 @@ import styles from './Form.module.css'
 
 function AddEdit({edit,dispatch}) {
 
+    function cancelar(){
+        window.location.href = '/people'
+    }
+
     const validate = values => {
         const errors = {};
     
@@ -100,7 +104,7 @@ function AddEdit({edit,dispatch}) {
 
                     <div className={styles.btn}>
                         <button  type="submit">Salvar</button>
-                        <button  type="submit">Cancelar</button>
+                        <button onClick={() => cancelar()}>Cancelar</button>
                     </div>
                 </div>
             </form>

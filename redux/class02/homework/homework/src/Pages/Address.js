@@ -19,15 +19,17 @@ function Create() {
             number:0,
             pais:''
         }, onSubmit: async (values) =>{
+            
             const {data} = await axios.get(`https://viacep.com.br/ws/${values.cep}/json/`)
-                   
                    values.cep = data.cep
                    values.cidade = data.localidade
                    values.estado = data.uf
                    values.logradouro = data.logradouro
                    values.complemento = data.complemento
+                   values.number = data.number
+                   console.log(data)
            
-                formik.resetForm()
+             
                
         }
     })
@@ -36,7 +38,7 @@ function Create() {
    
         <div>
          
-         <h1>Cadastrar</h1>
+         <h1>Endereço</h1>
          
                     <div className={styles.form}>
                      
@@ -50,26 +52,39 @@ function Create() {
                        
                     </div>
                     <div >
-                        <h4 htmlFor="cidade">Data de Nascimento</h4>
+                        <h4 htmlFor="cidade">Cidade</h4>
                         <input type="text" name="cidade" type="text"id="cidade"  onChange={formik.handleChange} value={formik.values.cidade} />
                       
                     </div>
                     <div >
-                        <h4 htmlFor="estado">Email</h4>
-                        <input type="text" name="estado" id="estado" placeholder="Digite seu estado" onChange={formik.handleChange} value={formik.values.estado} />
-                        
+                        <h4 htmlFor="estado">Estado</h4>
+                        <input type="text" name="estado" id="estado"  onChange={formik.handleChange} value={formik.values.estado} />
                       
                     </div>
 
                     <div >
-                        <h4 htmlFor="logradouro">CPF</h4>
-                        <input type="text" name="logradouro" id="logradouro" placeholder="Digite seu CPF" onChange={formik.handleChange} value={formik.values.logradouro} />
+                        <h4 htmlFor="logradouro">Logradouro</h4>
+                        <input type="text" name="logradouro" id="logradouro" onChange={formik.handleChange} value={formik.values.logradouro} />
+                        
+                        
+                    </div>
+
+                    <div >
+                        <h4 htmlFor="complemento">Complemento</h4>
+                        <input type="text" name="complemento" id="complemento"  onChange={formik.handleChange} value={formik.values.complemento} />
+                        
+                        
+                    </div>
+
+                    <div >
+                        <h4 htmlFor="number">Number</h4>
+                        <input type="text" name="number" id="number"  onChange={formik.handleChange} value={formik.values.number} />
                         
                         
                     </div>
 
                     <div className={styles.btn}>
-                        <button  type="submit">Cadastrar</button>
+                        <button  type="submit">Pesquisar</button>
                       
                     </div>
                 </div>

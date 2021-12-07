@@ -11,7 +11,9 @@ function Header({auth,dispatch}) {
                 <img className={styles.logo} src={logo} alt="" />
                 <ul>
                     <li><Link to='/'>Home</Link></li>
-                    <li><Link to='/login'>Login</Link></li>
+                    {
+                        !auth.auth && <li><Link to='/login'>Login</Link></li> 
+                    }
                      {
                          auth.auth && (
                              <>

@@ -8,6 +8,10 @@ import styles from './Form.module.css'
 
 function Create() {
 
+  function cancelar(){
+    window.location.href = '/people'
+}
+
     const validate = values => {
         const errors = {};
     
@@ -88,7 +92,7 @@ function Create() {
 
                     <div className={styles.btn}>
                         <button  type="submit">Cadastrar</button>
-                      
+                        <button onClick={() => cancelar()}>Cancelar</button>
                     </div>
                 </div>
             </form>
